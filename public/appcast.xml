@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel>
+        <item>
+            <title>Version 1.0.9</title>
+            <link>https://macdetox.com</link>
+            <sparkle:version>1.0.9</sparkle:version>
+            <sparkle:shortVersionString>1.0.9</sparkle:shortVersionString>
+            <description><![CDATA[
+                <h2>What's New in MacDetox 1.0.9</h2>
+                <ul>
+                    <li>Bug fixes and performance improvements</li>
+                </ul>
+            ]]></description>
+            <pubDate>Sat, 18 Oct 2025 04:39:54 +0000</pubDate>
+            <enclosure
+                url="https://macdetox.com/MacDetox-v1.0.9.dmg"
+                sparkle:version="1.0.9"
+                sparkle:shortVersionString="1.0.9"
+                length="7034839"
+                type="application/octet-stream"
+                sparkle:edSignature="WUsbNqCvp/UNNHKPkDh6FRgD9p1zZDod1dKrlAOQTOpi4WD7KGB2QWLx5YRcaIAlzhcHbliFkTMr9bjiVHYqAQ=="
+            />
+            <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>
+        </item>
+
+        <item>
+            <title>Version 1.0.8</title>
+            <link>https://macdetox.com</link>
+            <sparkle:version>1.0.8</sparkle:version>
+            <sparkle:shortVersionString>1.0.8</sparkle:shortVersionString>
+            <description><![CDATA[
+                <h2>What's New in MacDetox 1.0.8</h2>
+                <ul>
+                    <li>Bug fixes and performance improvements</li>
+                </ul>
+            ]]></description>
+            <pubDate>Fri, 17 Oct 2025 14:12:00 +0000</pubDate>
+            <enclosure
+                url="https://macdetox.com/MacDetox-v1.0.8.dmg"
+                sparkle:version="1.0.8"
+                sparkle:shortVersionString="1.0.8"
+                length="6349653"
+                type="application/octet-stream"
+                sparkle:edSignature="dfmyOQZtogHEGH3iIIcSS26Kzxp+FZBKHZq5tQslfqOGmGiWAwZbKE70DuvhwD+y+MwdW9dkuhI3lndMZ07LDA=="
+            />
+            <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>
+        </item>
+
+        <item>
+            <title>Version 1.0.7</title>
+            <link>https://macdetox.com</link>
+            <sparkle:version>1.0.7</sparkle:version>
+            <sparkle:shortVersionString>1.0.7</sparkle:shortVersionString>
+            <description><![CDATA[
+                <h2>What's New in MacDetox 1.0.7</h2>
+                <ul>
+                    <li>Bug fixes and performance improvements</li>
+                </ul>
+            ]]></description>
+            <pubDate>Thu, 16 Oct 2025 23:02:13 +0000</pubDate>
+            <enclosure
+                url="https://macdetox.com/MacDetox-v1.0.7.dmg"
+                sparkle:version="1.0.7"
+                sparkle:shortVersionString="1.0.7"
+                length="6349619"
+                type="application/octet-stream"
+                sparkle:edSignature="B50X0LN6S3qzpBVUzcwWpurDOwrU0Fn1/+30aMq54MOiZKetvUtbxuGJZYvUcPOZWWhr0URhaDRnRT8s5mWcDw=="
+            />
+            <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>
+        </item>
+
+        <item>
+            <title>Version 1.0.6</title>
+            <link>https://macdetox.com</link>
+            <sparkle:version>1.0.6</sparkle:version>
+            <sparkle:shortVersionString>1.0.6</sparkle:shortVersionString>
+            <description><![CDATA[
+                <h2>What's New in MacDetox 1.0.6</h2>
+                <ul>
+                    <li>Bug fixes and performance improvements</li>
+                </ul>
+            ]]></description>
+            <pubDate>Thu, 16 Oct 2025 22:58:03 +0000</pubDate>
+            <enclosure
+                url="https://macdetox.com/MacDetox-v1.0.6.dmg"
+                sparkle:version="1.0.6"
+                sparkle:shortVersionString="1.0.6"
+                length="6349681"
+                type="application/octet-stream"
+                sparkle:edSignature="xsZqXvkxt9jtFQCXebKJT//Czp8zPASbQV+sf55BuMGIGhYyy4JfY3Bm/WTS1vqcuWl8C62fAg+P+O3KGjmzCA=="
+            />
+            <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>
+        </item>
+
+        <item>
+            <title>Version 1.0.5</title>
+            <link>https://macdetox.com</link>
+            <sparkle:version>1.0.5</sparkle:version>
+            <sparkle:shortVersionString>1.0.5</sparkle:shortVersionString>
+            <description><![CDATA[
+                <h2>What's New in MacDetox 1.0.5</h2>
+                <ul>
+                    <li>Bug fixes and performance improvements</li>
+                </ul>
+            ]]></description>
+            <pubDate>Thu, 16 Oct 2025 22:55:24 +0000</pubDate>
+            <enclosure
+                url="https://macdetox.com/MacDetox-v1.0.5.dmg"
+                sparkle:version="1.0.5"
+                sparkle:shortVersionString="1.0.5"
+                length="6349656"
+                type="application/octet-stream"
+                sparkle:edSignature="bQXts/5kN0gioOlwPkTax+zI4uL9bszpo5FU3/FsHlonEQ8BjDMtwoq6S6u9E0xN/1C1wZtL3hQp9pl1flQECw=="
+            />
+            <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>
+        </item>
+
+        <item>
+            <title>Version 1.0.4</title>
+            <link>https://macdetox.com</link>
+            <sparkle:version>1.0.4</sparkle:version>
+            <sparkle:shortVersionString>1.0.4</sparkle:shortVersionString>
+            <description><![CDATA[
+                <h2>What's New in MacDetox 1.0.4</h2>
+                <ul>
+                    <li>Bug fixes and performance improvements</li>
+                </ul>
+            ]]></description>
+            <pubDate>Thu, 16 Oct 2025 22:49:07 +0000</pubDate>
+            <enclosure
+                url="https://macdetox.com/MacDetox-v1.0.4.dmg"
+                sparkle:version="1.0.4"
+                sparkle:shortVersionString="1.0.4"
+                length="6346588"
+                type="application/octet-stream"
+                sparkle:edSignature="C9TmRzFt5VyMJyBD/DA81u5fOp7nEgXZdIdHS9zir2I4W9/29OuNVYfAAKEgJTcJR9HDQI0bTJJC4sbnQOQ9Ag=="
+            />
+            <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>
+        </item>
+
+        <item>
+            <title>Version 1.0.3</title>
+            <link>https://macdetox.com</link>
+            <sparkle:version>1.0.3</sparkle:version>
+            <sparkle:shortVersionString>1.0.3</sparkle:shortVersionString>
+            <description><![CDATA[
+                <h2>What's New in MacDetox 1.0.3</h2>
+                <ul>
+                    <li>Bug fixes and performance improvements</li>
+                </ul>
+            ]]></description>
+            <pubDate>Thu, 16 Oct 2025 22:42:34 +0000</pubDate>
+            <enclosure
+                url="https://macdetox.com/MacDetox-v1.0.3.dmg"
+                sparkle:version="1.0.3"
+                sparkle:shortVersionString="1.0.3"
+                length="6346597"
+                type="application/octet-stream"
+                sparkle:edSignature="ya4yOVxjN5/uw/tvr2uNm3ARfUXaID9KANyGJp2sYJEolkEz3N9NbGbizjFJqdaFRahMwvAaNrXRUrkjpcHDDA=="
+            />
+            <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>
+        </item>
+
+        <item>
+            <title>Version 1.0.2</title>
+            <link>https://macdetox.com</link>
+            <sparkle:version>1.0.2</sparkle:version>
+            <sparkle:shortVersionString>1.0.2</sparkle:shortVersionString>
+            <description><![CDATA[
+                <h2>What's New in MacDetox 1.0.2</h2>
+                <ul>
+                    <li>Bug fixes and performance improvements</li>
+                </ul>
+            ]]></description>
+            <pubDate>Thu, 16 Oct 2025 22:36:31 +0000</pubDate>
+            <enclosure
+                url="https://github.com/sshirgaleev/MacDetox/releases/download/v1.0.2/MacDetox-v1.0.2.dmg"
+                sparkle:version="1.0.2"
+                sparkle:shortVersionString="1.0.2"
+                length="6344181"
+                type="application/octet-stream"
+                sparkle:edSignature="Mp1w8pvby/pzhqtS7g5NzaI2XOygGejRk2sb8M+1G+usURTmSbywKiRZy4AGutemcJCVL1TR4r1GOzNHOG50CQ=="
+            />
+            <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>
+        </item>
+
+        <title>MacDetox Updates</title>
+        <link>https://macdetox.com/appcast.xml</link>
+        <description>MacDetox app updates feed</description>
+        <language>en</language>
+
+        <!-- Example release entry - replace with actual releases -->
+        <item>
+            <title>Version 1.0</title>
+            <link>https://macdetox.com</link>
+            <sparkle:version>1.0</sparkle:version>
+            <sparkle:shortVersionString>1.0</sparkle:shortVersionString>
+            <description><![CDATA[
+                <h2>What's New in MacDetox 1.0</h2>
+                <ul>
+                    <li>Initial release</li>
+                    <li>Clean Mac junk files</li>
+                    <li>Uninstall apps completely</li>
+                </ul>
+            ]]></description>
+            <pubDate>Mon, 16 Oct 2025 00:00:00 +0000</pubDate>
+            <enclosure
+                url="https://github.com/yourusername/macdetox/releases/download/v1.0/MacDetox-v1.0.dmg"
+                sparkle:version="1.0"
+                sparkle:shortVersionString="1.0"
+                length="0"
+                type="application/octet-stream"
+                sparkle:edSignature="SIGNATURE_WILL_BE_GENERATED"
+            />
+            <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>
+        </item>
+    </channel>
+</rss>
