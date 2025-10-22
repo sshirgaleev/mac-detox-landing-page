@@ -107,24 +107,26 @@
     </header>
 
     <section class="hero-welcome-wrapper hero-1">
-        <div class="single-slide text-white">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-7 col-12 col-lg-10 offset-lg-1 offset-xl-0">
-                        <div class="hero-contents">
-                            <h1>Your Mac is drowning in hidden junk</h1>
-                            <p>Right now, invisible files are wasting up to 118+ GB on your Mac. Caches, logs, incomplete downloads, and leftover app files you can't see in Finder. MacDetox finds and removes them in seconds.</p>
-                            <a href="MacDetox.dmg" download class="theme-btn" style="display: inline-block; margin-top: 20px; background: linear-gradient(135deg, #10b981 0%, #059669 100%); color: white; font-size: 20px; padding: 20px 50px; border-radius: 50px; font-weight: 600; box-shadow: 0 10px 30px rgba(16, 185, 129, 0.4); transition: all 0.3s ease;">Download for Mac</a>
+        <div id="hero-bg" class="hero-background"></div>
+            <div class="single-slide text-white">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-7 col-12 col-lg-10 offset-lg-1 offset-xl-0">
+                            <div class="hero-contents">
+                                <h1>Your Mac is drowning in hidden junk</h1>
+                                <p>Right now, invisible files are wasting up to 118+ GB on your Mac. Caches, logs, incomplete downloads, and leftover app files you can't see in Finder. MacDetox finds and removes them in seconds.</p>
+                                <a href="MacDetox.dmg" download class="theme-btn" style="display: inline-block; margin-top: 20px; background: linear-gradient(135deg, #10b981 0%, #059669 100%); color: white; font-size: 20px; padding: 20px 50px; border-radius: 50px; font-weight: 600; box-shadow: 0 10px 30px rgba(16, 185, 129, 0.4); transition: all 0.3s ease;">Download for Mac</a>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-xl-5 col-12 text-xl-end col-lg-10 offset-lg-1 offset-xl-0">
-                        <div class="hero-mobile mt-5 mt-xl-0">
-                            <img src="assets/img/screenshot.png" alt="MacDetox App Screenshot" style="max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 20px 60px rgba(0,0,0,0.3);">
+                        <div class="col-xl-5 col-12 text-xl-end col-lg-10 offset-lg-1 offset-xl-0">
+                            <div class="hero-mobile mt-5 mt-xl-0">
+                                <img class="glow-effect" src="assets/img/screenshot.png" alt="MacDetox App Screenshot">
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        
     </section>
 
     <section class="our-best-features-wrapper section-padding">
@@ -139,27 +141,21 @@
             <div class="row">
                 <div class="col-lg-4 col-md-6 col-12">
                     <div class="features-card-item style-1">
-                        <div class="icon icon1">
-                            <i class="icon-folder"></i>
-                        </div>
+                      <div id="icon-trash" class="icon icon1"></div> 
                         <h3>Invisible junk filling your disk</h3>
                         <p>Caches, logs, and temp files pile up daily. You can't see them in Finder, but they're wasting gigabytes. Apps never clean up after themselves.</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 col-12">
                     <div class="features-card-item style-1">
-                        <div class="icon icon2">
-                            <i class="icon-trash"></i>
-                        </div>
+                    <div id="icon-search" class="icon icon2"></div>
                         <h3>Apps leave traces everywhere</h3>
                         <p>Deleting an app doesn't remove it completely. Leftover files, preferences, and data stay hidden across your system, wasting space forever.</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 col-12">
                     <div class="features-card-item style-1">
-                        <div class="icon icon3">
-                            <i class="icon-chart-bar"></i>
-                        </div>
+                        <div id="icon-chart" class="icon icon3"></div>
                         <h3>You don't know what's eating your space</h3>
                         <p>Disk space vanishes and you have no idea where. Large folders hide in obscure locations. You need to see exactly what's taking up room.</p>
                     </div>
@@ -370,35 +366,38 @@
             </p>
             <div id="support-anim" style="width:180px; height:180px; margin:0 auto;"></div>
             <p class="mt-3">
-            📩 <a href="mailto:support@macdetox.com">support@macdetox.com</a>
+            📩 <a href="mailto:support@macdetox.com">sshrigaleev@gmail.com</a>
             </p>
         </div>
     </section>
 
     <footer class="footer-wrapper footer-1">
-        <div class="footer-widgets-wrapper">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-6 offset-xl-3 col-lg-8 offset-lg-2 col-12 text-center">
-                        <div class="single-footer-widget wow fadeInUp">
-                            <div class="about-us-widget">
-                                <h3 style="color: #fff; margin-bottom: 20px;">💻 MacDetox</h3>
-                                <p>Reclaim gigabytes of wasted space. Clean invisible junk, uninstall apps completely, and see what's eating your storage.</p>
+            <div class="footer-widgets-wrapper">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-6 offset-xl-3 col-lg-8 offset-lg-2 col-12 text-center">
+                            <div class="single-footer-widget wow fadeInUp">
+                                <div class="about-us-widget">
+                                    <h3 style="color: #fff; margin-bottom: 20px;">💻 MacDetox</h3>
+                                    <p>Reclaim gigabytes of wasted space. Clean invisible junk, uninstall apps completely, and see what's eating your storage.</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="footer-bottom-wrapper">
-            <div class="container">
-                <div class="footer-bottom-content d-md-flex justify-content-center">
-                    <div class="site-copyright wow fadeInUp" data-wow-delay=".2" data-wow-duration="1s">
-                        <p>&copy; 2025 MacDetox. All Rights Reserved.</p>
+            <div class="footer-bottom-wrapper">
+                <div class="container">
+                    <div class="footer-bottom-content d-md-flex justify-content-center">
+                        <div class="site-copyright wow fadeInUp" data-wow-delay=".2" data-wow-duration="1s">
+                            <p>&copy; 2025 MacDetox. All Rights Reserved.</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+            <div class="footer-wave">
+                <div id="footer-wave-anim"></div>
+            </div>
     </footer>
 
     <!--  ALl JS Plugins
@@ -451,6 +450,73 @@
             loop: true,
             autoplay: true,
             path: './assets/support.json'
+        });
+    </script>
+
+    <script>
+        lottie.loadAnimation({
+            container: document.getElementById('icon-trash'),
+            renderer: 'svg',
+            loop: true,
+            autoplay: true,
+            path: './assets/trash.json'
+        });
+    </script>
+
+    
+   
+    <script>
+         // Search Traces animation
+        lottie.loadAnimation({
+        container: document.getElementById('icon-search'),
+        renderer: 'svg',
+        loop: true,
+        autoplay: true,
+        path: './assets/search.json'
+        });
+    </script>
+
+    <script>
+        // Chart / Analytics animation
+        lottie.loadAnimation({
+        container: document.getElementById('icon-chart'),
+        renderer: 'svg',
+        loop: true,
+        autoplay: true,
+        path: './assets/chart.json'
+        });
+    </script>
+    
+    <script>
+        // Background wave animation
+        lottie.loadAnimation({
+        container: document.getElementById('hero-bg'),
+        renderer: 'svg',
+        loop: true,
+        autoplay: true,
+        path: './assets/wave.json'
+        });
+    </script>
+
+    <script>
+        // Footer wave animation
+        lottie.loadAnimation({
+        container: document.getElementById('footer-wave-anim'),
+        renderer: 'svg',
+        loop: true,
+        autoplay: true,
+        path: './assets/wave.json'
+        });
+    </script>
+
+    <script>
+        window.addEventListener('scroll', function() {
+        const header = document.querySelector('.header-1');
+        if (window.scrollY > 50) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
         });
     </script>
 

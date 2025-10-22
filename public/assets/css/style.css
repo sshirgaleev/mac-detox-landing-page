@@ -2023,6 +2023,7 @@ nav .breadcrumb li {
   background-position: center;
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
+  background-clip: text;
 }
 
 .mask-outline h1 {
@@ -4542,10 +4543,6 @@ header.header-1 .header-right-element .color-2:hover {
   color: #617686;
   font-size: 14px;
   font-weight: 500;
-}
-
-.testimonial-carousel-active {
-  /* the parent */
 }
 
 .testimonial-carousel-active .slick-list {
@@ -7191,49 +7188,20 @@ footer .footer-bottom-wrapper .footer-bottom-content .social-links a:hover {
 /* === Reviews Section === */
 .review-card {
   background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-  padding: 25px;
-  text-align: left;
-  transition: transform 0.3s ease;
-}
-
-.review-card:hover {
-  transform: translateY(-5px);
-}
-
-.review-text {
-  font-size: 1.1rem;
-  color: #222;
-  line-height: 1.6;
-}
-
-.review-author {
-  margin-top: 15px;
-  font-weight: 600;
-  color: #555;
-}
-
-/* === Reviews Section (Animated, fixed) === */
-.review-card {
-  background: #fff;
   border-radius: 14px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
   padding: 30px;
   text-align: left;
   transition: all 0.4s ease;
-  /* убираем изначальное скрытие */
   transform: translateY(0);
   opacity: 1;
 }
 
-/* Hover-эффект */
 .review-card:hover {
   transform: translateY(-8px) scale(1.02);
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
 }
 
-/* Текст */
 .review-text {
   font-size: 1.1rem;
   color: #222;
@@ -7246,9 +7214,11 @@ footer .footer-bottom-wrapper .footer-bottom-content .social-links a:hover {
   color: #000;
 }
 
-/* Автор */
 .review-author {
-  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 15px;
   font-weight: 600;
   color: #777;
   font-size: 0.95rem;
@@ -7259,19 +7229,8 @@ footer .footer-bottom-wrapper .footer-bottom-content .social-links a:hover {
   height: 40px;
   border-radius: 50%;
   object-fit: cover;
-  margin-right: 10px;
-  vertical-align: middle;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   transition: transform 0.3s ease;
-}
-
-.review-author {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-top: 15px;
-  font-weight: 600;
-  color: #555;
 }
 
 .review-card:hover .review-avatar {
@@ -7314,4 +7273,407 @@ footer .footer-bottom-wrapper .footer-bottom-content .social-links a:hover {
 
 .support-email:hover {
   color: #005FCC;
+}
+
+
+.glow-effect {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, .3);
+  transition: box-shadow .35s ease, transform .35s ease;
+  will-change: transform, box-shadow; /* для плавности */
+}
+
+
+.glow-effect:hover {
+  box-shadow:
+    0 50px 100px rgba(0, 200, 255, .20),
+    0 0 40px rgba(0, 200, 255, .45),
+    0 0 80px rgba(0, 200, 255, .35);
+  transform: translateY(-5px);
+}
+
+.icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#icon-trash svg {
+  width: 100%;
+  height: 100%;
+}
+
+.hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.hero-background svg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.3;
+}
+
+.hero-welcome-wrapper {
+  position: relative;
+  z-index: 1;
+}
+
+.footer-wrapper {
+  position: relative;
+  background-color: #050517;
+  overflow: hidden;
+  padding-top: 120px;
+  padding-bottom: 80px;
+  box-shadow: 0 -10px 60px rgba(0, 174, 255, 0.2) inset;
+}
+
+/* Волна */
+.footer-wave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 180px;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.footer-wave lottie-player {
+  width: 100%;
+  height: 100%;
+  opacity: 0.8;
+  filter: drop-shadow(0 0 25px rgba(0, 200, 255, 0.6))
+          drop-shadow(0 0 60px rgba(0, 120, 255, 0.3));
+  mix-blend-mode: screen;
+  animation: waveDrift 12s ease-in-out infinite alternate;
+}
+
+@keyframes waveDrift {
+  0% { transform: translateY(20px) translateX(0); }
+  100% { transform: translateY(25px) translateX(-20px); }
+}
+
+/* Контент футера поверх */
+.footer-widgets-wrapper,
+.footer-bottom-wrapper {
+  position: relative;
+  z-index: 2;
+}
+
+/* === HEADER APPLE STYLE === */
+.header-1 {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 40, 0.85) 0%,
+    rgba(0, 0, 80, 0.4) 50%,
+    rgba(0, 0, 120, 0) 100%
+  );
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  z-index: 100;
+  padding: 20px 0;
+  transition: background 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Верхний “свет” (еле заметная подсветка, как у MacBook) */
+.header-1::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, rgba(0, 150, 255, 0.3), rgba(255, 255, 255, 0.1), rgba(0, 150, 255, 0.3));
+  opacity: 0.5;
+}
+
+/* Активное затемнение при скролле */
+.header-1.scrolled {
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 30, 0.95) 0%,
+    rgba(0, 0, 60, 0.8) 50%,
+    rgba(0, 0, 100, 0.5) 100%
+  );
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+}
+
+/* === Универсальный Apple-style эффект для всех кнопок и ссылок === */
+a.theme-btn,
+button,
+.btn,
+.btn-header {
+  position: relative;
+  display: inline-block;
+  background: linear-gradient(180deg, rgba(255,255,255,0.15), rgba(255,255,255,0.05));
+  color: #fff !important;
+  padding: 10px 26px;
+  border: 1px solid rgba(255,255,255,0.25);
+  border-radius: 12px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow:
+    inset 0 1px 1px rgba(255,255,255,0.2),
+    0 4px 15px rgba(0,0,0,0.25),
+    0 0 15px rgba(0,122,255,0.2);
+  transition: all 0.35s ease;
+  overflow: hidden;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+/* Внутренний мягкий блик */
+a.theme-btn::before,
+button::before,
+.btn::before,
+.btn-header::before {
+  content: "";
+  position: absolute;
+  top: -60%;
+  left: -60%;
+  width: 220%;
+  height: 220%;
+  background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.25), transparent 60%);
+  transform: rotate(25deg);
+  transition: all 0.6s ease;
+  opacity: 0;
+}
+
+/* Hover-анимация */
+a.theme-btn:hover,
+button:hover,
+.btn:hover,
+.btn-header:hover {
+  transform: translateY(-2px) scale(1.03);
+  box-shadow:
+    inset 0 1px 2px rgba(255,255,255,0.3),
+    0 0 30px rgba(0,150,255,0.6),
+    0 4px 25px rgba(0,122,255,0.4);
+  background: linear-gradient(180deg, rgba(255,255,255,0.25), rgba(255,255,255,0.08));
+}
+
+a.theme-btn:hover::before,
+button:hover::before,
+.btn:hover::before,
+.btn-header:hover::before {
+  opacity: 1;
+  transform: rotate(25deg) translateY(-10%);
+}
+
+/* --- Включаем анимацию hover и на мобильных устройствах --- */
+@media (hover: none) and (pointer: coarse) {
+  a.theme-btn,
+  button,
+  .btn,
+  .btn-header {
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+  }
+
+  a.theme-btn:active,
+  button:active,
+  .btn:active,
+  .btn-header:active {
+    transform: scale(0.97);
+    box-shadow:
+      0 0 20px rgba(0,122,255,0.5),
+      inset 0 2px 5px rgba(255,255,255,0.3);
+    background: linear-gradient(180deg, rgba(255,255,255,0.25), rgba(255,255,255,0.1));
+  }
+}
+
+/* --- Исправляем невидимость секции How it works --- */
+.faq-wrapper {
+  position: relative;
+  z-index: 5;
+  background: #fafaff; /* мягкий светлый фон, чтобы отделить от хедера */
+  color: #0a0a0a;
+}
+
+/* Если внутри аккордеона кнопки стали белыми и текст не виден */
+.faq-wrapper .accordion-button {
+  color: #0a0a0a !important;
+  background-color: #fff !important;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+/* Hover-эффект, чтобы оживить */
+.faq-wrapper .accordion-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.header-1 {
+  z-index: 100;
+}
+
+.faq-wrapper {
+  z-index: 3;
+}
+
+/* --- How It Works (Step Style) --- */
+.faq-wrapper {
+  background: #f9f9fb;
+  padding: 120px 0;
+  position: relative;
+  z-index: 5;
+}
+
+/* Каждый шаг */
+.faq-wrapper .accordion-item {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+  margin-bottom: 40px;
+  transition: all 0.4s ease;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Цифра */
+.faq-wrapper .accordion-item::before {
+  content: counter(step);
+  counter-increment: step;
+  position: absolute;
+  top: 22px;
+  left: -60px;
+  background: linear-gradient(145deg, #007aff, #4fc3ff);
+  color: white;
+  font-weight: 700;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  box-shadow: 0 4px 10px rgba(0, 122, 255, 0.3);
+}
+
+/* Стрелка вниз */
+.faq-wrapper .accordion-item::after {
+  content: "";
+  position: absolute;
+  left: -42px;
+  top: 60px;
+  width: 2px;
+  height: calc(100% - 30px);
+  background: rgba(0, 122, 255, 0.2);
+}
+
+/* Подсветка при наведении */
+.faq-wrapper .accordion-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 24px rgba(0, 122, 255, 0.15);
+}
+
+/* Кнопка */
+.faq-wrapper .accordion-button {
+  font-weight: 600;
+  font-size: 18px;
+  color: #0a0a0a;
+  background: #fff;
+  border: none;
+  box-shadow: none;
+  padding: 22px 32px;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.faq-wrapper .accordion-button:not(.collapsed) {
+  color: #007aff;
+  background: rgba(0, 122, 255, 0.06);
+}
+
+/* Тело аккордеона */
+.faq-wrapper .accordion-body {
+  padding: 0 32px 22px 32px;
+  color: #333;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Сброс Bootstrap */
+.accordion-button:focus {
+  box-shadow: none !important;
+}
+
+.faq-wrapper {
+  counter-reset: step;
+}
+
+/* Активируем счётчик внутри нужного контейнера */
+.step-accordion {
+  position: relative;
+  counter-reset: step;
+}
+
+/* Нумерация шагов */
+.step-accordion .accordion-item {
+  position: relative;
+  padding-left: 60px;
+}
+
+.step-accordion .accordion-item::before {
+  content: counter(step);
+  counter-increment: step;
+  position: absolute;
+  top: 22px;
+  left: 0;
+  background: linear-gradient(135deg, #007aff, #4fc3ff);
+  color: white;
+  font-weight: 600;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  box-shadow: 0 4px 10px rgba(0, 122, 255, 0.3);
+}
+
+/* Вертикальная линия между кружками */
+.step-accordion .accordion-item:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  left: 16px;
+  top: 60px;
+  width: 2px;
+  height: calc(100% - 20px);
+  background: rgba(0, 122, 255, 0.2);
+}
+
+/* --- Тонкие линии между шагами --- */
+.step-accordion .accordion-item:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  left: 16px;
+  top: 60px;
+  width: 2px;
+  height: calc(100% - 40px);
+  background: rgba(0, 122, 255, 0.15);
+}
+
+/* Убираем стрелки, если они где-то остались */
+.step-accordion .accordion-item:not(:last-child) .accordion-header::after {
+  content: none !important;
 }

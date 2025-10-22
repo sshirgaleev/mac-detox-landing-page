@@ -121,6 +121,34 @@ Description: Compact landing page for MacDetox Mac cleaning app
     transform: none !important;
 }
 
+/* МАКСИМАЛЬНО АГРЕССИВНОЕ удаление стрелок */
+button.accordion-button::after,
+button.accordion-button.collapsed::after,
+.faq-wrapper .accordion-button::after,
+.faq-wrapper button.accordion-button::after,
+h4.accordion-header button.accordion-button::after,
+.step-accordion button.accordion-button::after {
+    display: none !important;
+    content: "" !important;
+    background: none !important;
+    background-image: none !important;
+    width: 0 !important;
+    height: 0 !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    position: absolute !important;
+    left: -9999px !important;
+}
+
+/* УБИРАЕМ СИНИЕ СТРЕЛКИ ВНИЗ между элементами аккордеона */
+.step-accordion .accordion .accordion-item .accordion-header::before,
+.step-accordion .accordion-item .accordion-header::before,
+.faq-wrapper .accordion-item .accordion-header::before {
+    display: none !important;
+    content: none !important;
+    visibility: hidden !important;
+}
+
 /* Tighter mobile spacing */
 @media (max-width: 991px) {
     .section-padding {
