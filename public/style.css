@@ -164,5 +164,35 @@ h4.accordion-header button.accordion-button::after,
     }
 }
 
+/* Hero Background Animation Full Width Fix */
+.hero-background {
+    position: absolute !important;
+    top: 0 !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    width: 100vw !important;
+    height: 100% !important;
+    z-index: 0 !important;
+    overflow: hidden !important;
+    pointer-events: none !important;
+}
+
+.hero-background svg,
+.hero-background canvas {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    opacity: 0.3 !important;
+}
+
+.hero-welcome-wrapper {
+    position: relative !important;
+    overflow: visible !important;
+}
+
+.hero-1 {
+    overflow: visible !important;
+}
+
 
 

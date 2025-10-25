@@ -416,96 +416,74 @@
     <script src="assets/js/metismenu.js"></script>
     <script src="assets/js/active.js"></script>
     <script>
-        var animation = lottie.loadAnimation({
-            container: document.getElementById('sparkles'),
-            renderer: 'svg',
-            loop: true,
-            autoplay: true,
-            path: './assets/sparkles.json'
-        });
-    </script>
-    <script>
-        lottie.loadAnimation({
-            container: document.getElementById('chart-anim'),
-            renderer: 'svg',
-            loop: true,
-            autoplay: true,
-            path: './assets/analytics-chart.json'
-        });
-     </script>
-     <script>
-        lottie.loadAnimation({
-            container: document.getElementById('lightning-anim'),
-            renderer: 'svg',
-            loop: true,
-            autoplay: true,
-            path: './assets/lightning.json'
-        });
-    </script>
+        // Detect Safari and use canvas renderer for better performance
+        const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+        const renderer = isSafari ? 'canvas' : 'svg';
 
-    <script>
-        lottie.loadAnimation({
-            container: document.getElementById('support-anim'),
-            renderer: 'svg',
-            loop: true,
-            autoplay: true,
-            path: './assets/support.json'
-        });
-    </script>
+        // Store all animations
+        const animations = {};
 
-    <script>
-        lottie.loadAnimation({
-            container: document.getElementById('icon-trash'),
-            renderer: 'svg',
-            loop: true,
-            autoplay: true,
-            path: './assets/trash.json'
-        });
-    </script>
+        // Helper function to load animations with lazy loading
+        function loadAnimation(id, path, autoplay = false) {
+            const container = document.getElementById(id);
+            if (!container) return;
 
-    
-   
-    <script>
-         // Search Traces animation
-        lottie.loadAnimation({
-        container: document.getElementById('icon-search'),
-        renderer: 'svg',
-        loop: true,
-        autoplay: true,
-        path: './assets/search.json'
-        });
-    </script>
+            const anim = lottie.loadAnimation({
+                container: container,
+                renderer: renderer,
+                loop: true,
+                autoplay: autoplay,
+                path: path
+            });
 
-    <script>
-        // Chart / Analytics animation
-        lottie.loadAnimation({
-        container: document.getElementById('icon-chart'),
-        renderer: 'svg',
-        loop: true,
-        autoplay: true,
-        path: './assets/chart.json'
-        });
-    </script>
-    
-    <script>
-        // Background wave animation
-        lottie.loadAnimation({
-        container: document.getElementById('hero-bg'),
-        renderer: 'svg',
-        loop: true,
-        autoplay: true,
-        path: './assets/wave.json'
-        });
-    </script>
+            animations[id] = anim;
+            return anim;
+        }
 
-    <script>
-        // Footer wave animation
-        lottie.loadAnimation({
-        container: document.getElementById('footer-wave-anim'),
-        renderer: 'svg',
-        loop: true,
-        autoplay: true,
-        path: './assets/wave.json'
+        // Load hero background immediately (above the fold)
+        loadAnimation('hero-bg', 'assets/wave.json', true);
+
+        // Lazy load other animations when they come into view
+        const observerOptions = {
+            root: null,
+            rootMargin: '50px',
+            threshold: 0.1
+        };
+
+        const animationObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                const id = entry.target.id;
+                if (entry.isIntersecting) {
+                    if (animations[id]) {
+                        animations[id].play();
+                    }
+                } else {
+                    if (animations[id]) {
+                        animations[id].pause();
+                    }
+                }
+            });
+        }, observerOptions);
+
+        // Wait for DOM to be ready
+        document.addEventListener('DOMContentLoaded', function() {
+            // Load all animations
+            loadAnimation('sparkles', 'assets/sparkles.json');
+            loadAnimation('chart-anim', 'assets/analytics-chart.json');
+            loadAnimation('lightning-anim', 'assets/lightning.json');
+            loadAnimation('support-anim', 'assets/support.json');
+            loadAnimation('icon-trash', 'assets/trash.json');
+            loadAnimation('icon-search', 'assets/search.json');
+            loadAnimation('icon-chart', 'assets/chart.json');
+            loadAnimation('footer-wave-anim', 'assets/wave.json');
+
+            // Observe all animation containers
+            Object.keys(animations).forEach(id => {
+                const element = document.getElementById(id);
+                if (element && id !== 'hero-bg') { // Don't pause hero background
+                    animationObserver.observe(element);
+                }
+            });
         });
     </script>
 
