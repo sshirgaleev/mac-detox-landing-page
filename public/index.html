@@ -30,6 +30,23 @@
     <!-- template main style css file -->
     <link rel="stylesheet" href="style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js"></script>
+    <style>
+        /* Force FAQ accordion to be 100% visible */
+        #mainFAQ,
+        #mainFAQ *,
+        #mainFAQ .accordion-item,
+        #mainFAQ .accordion-button,
+        #mainFAQ .accordion-body,
+        #mainFAQ .accordion-header,
+        #mainFAQ h2,
+        #mainFAQ button {
+            opacity: 1 !important;
+            visibility: visible !important;
+            animation: none !important;
+            -webkit-animation: none !important;
+            filter: none !important;
+        }
+    </style>
 
 </head>
 
@@ -371,6 +388,73 @@
         </div>
     </section>
 
+    <!-- ========== FAQ Section ========== -->
+    <section class="content-block section-padding" style="background-color: #f9fafc;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 offset-lg-2">
+                    <div class="section-title text-center mb-5">
+                        <h2>Frequently Asked Questions</h2>
+                    </div>
+
+                    <div class="accordion" id="mainFAQ">
+                        <div class="accordion-item" style="background: #fff !important; border-radius: 18px !important; margin-bottom: 20px !important; box-shadow: 0 6px 25px rgba(0, 0, 0, 0.08) !important;">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqOne" aria-expanded="false" aria-controls="faqOne" style="background: #e8ebf0 !important; color: #0a0a1a !important; font-weight: 600 !important; font-size: 18px !important; padding: 20px 25px !important; opacity: 1 !important; pointer-events: auto !important;">
+                                    Why do I need MacDetox?
+                                </button>
+                            </h2>
+                            <div id="faqOne" class="accordion-collapse collapse" data-bs-parent="#mainFAQ" aria-labelledby="headingOne">
+                                <div class="accordion-body" style="background: #fff !important; padding: 20px 30px !important; color: #555 !important; opacity: 1 !important;">
+                                    MacDetox helps you clean out junk files, app leftovers, and invisible clutter that slow down your Mac — so it runs like new again.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item" style="background: #fff !important; border-radius: 18px !important; margin-bottom: 20px !important; box-shadow: 0 6px 25px rgba(0, 0, 0, 0.08) !important;">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqTwo" aria-expanded="false" aria-controls="faqTwo" style="background: #e8ebf0 !important; color: #0a0a1a !important; font-weight: 600 !important; font-size: 18px !important; padding: 20px 25px !important; opacity: 1 !important; pointer-events: auto !important;">
+                                    Is MacDetox safe to use?
+                                </button>
+                            </h2>
+                            <div id="faqTwo" class="accordion-collapse collapse" data-bs-parent="#mainFAQ" aria-labelledby="headingTwo">
+                                <div class="accordion-body" style="background: #fff !important; padding: 20px 30px !important; color: #555 !important; opacity: 1 !important;">
+                                    Yes. MacDetox never deletes system files — it only removes safe-to-clean junk, caches, and leftovers from uninstalled apps.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item" style="background: #fff !important; border-radius: 18px !important; margin-bottom: 20px !important; box-shadow: 0 6px 25px rgba(0, 0, 0, 0.08) !important;">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqThree" aria-expanded="false" aria-controls="faqThree" style="background: #e8ebf0 !important; color: #0a0a1a !important; font-weight: 600 !important; font-size: 18px !important; padding: 20px 25px !important; opacity: 1 !important; pointer-events: auto !important;">
+                                    Do I have to pay for MacDetox?
+                                </button>
+                            </h2>
+                            <div id="faqThree" class="accordion-collapse collapse" data-bs-parent="#mainFAQ" aria-labelledby="headingThree">
+                                <div class="accordion-body" style="background: #fff !important; padding: 20px 30px !important; color: #555 !important; opacity: 1 !important;">
+                                    Basic cleaning is free. Advanced features like deep scans and auto-optimization are available in the Pro version.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item" style="background: #fff !important; border-radius: 18px !important; margin-bottom: 20px !important; box-shadow: 0 6px 25px rgba(0, 0, 0, 0.08) !important;">
+                            <h2 class="accordion-header" id="headingFour">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqFour" aria-expanded="false" aria-controls="faqFour" style="background: #e8ebf0 !important; color: #0a0a1a !important; font-weight: 600 !important; font-size: 18px !important; padding: 20px 25px !important; opacity: 1 !important; pointer-events: auto !important;">
+                                    What versions of macOS does MacDetox support?
+                                </button>
+                            </h2>
+                            <div id="faqFour" class="accordion-collapse collapse" data-bs-parent="#mainFAQ" aria-labelledby="headingFour">
+                                <div class="accordion-body" style="background: #fff !important; padding: 20px 30px !important; color: #555 !important; opacity: 1 !important;">
+                                    The app supports macOS 11 (Big Sur) and later versions — including Monterey, Ventura, and Sonoma.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <footer class="footer-wrapper footer-1">
             <div class="footer-widgets-wrapper">
                 <div class="container">
@@ -525,7 +609,20 @@
 
     <!-- активация wow -->
     <script>
+    // Initialize WOW.js
     new WOW().init();
+
+    // Force FAQ accordion to be fully visible
+    setTimeout(function() {
+        const faqAccordion = document.getElementById('mainFAQ');
+        if (faqAccordion) {
+            const allElements = faqAccordion.querySelectorAll('*');
+            allElements.forEach(el => {
+                el.style.setProperty('opacity', '1', 'important');
+                el.style.setProperty('visibility', 'visible', 'important');
+            });
+        }
+    }, 100);
     </script>
 </body>
 
