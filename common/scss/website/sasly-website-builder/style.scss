@@ -1,0 +1,316 @@
+/*---
+
+-----------------------------------------------------------------------------------
+Template Name: Sasly - Multipurpose Landing Page PHP Template
+Page Name: Home Website Builder
+Description: Landing page for showcasing website builder features, benefits, and CTA sections.
+-----------------------------------------------------------------------------------
+
+---*/
+
+
+@import "../../abstract";
+
+/* Common CSS */ 
+
+:root {
+    --primary-color: #00A1FC;
+    --primary-black-color: #000000;
+}
+h2{
+    line-height: 65px;
+}
+.theme-btn{
+    &.style-one{
+        padding: 18px 35px;
+        font-size: 16px;
+    }
+}
+.sub-heading{
+    border-radius: 14px;
+    border: 2px solid rgba(16, 16, 16, 0.10);
+    background-color: rgba(0, 161, 252, 0.10);
+}
+
+/* Header Navigation */ 
+
+.header-navigation{
+    & .main-menu{
+        & ul{
+            & > li{
+                display: inline-block;
+                position: relative;
+                margin-left: 17px;
+                margin-right: 17px;
+                & > a {
+                    position: relative;
+                    display: block;
+                    font: 600 18px $heading-font;
+                    text-transform: capitalize;
+                    line-height: 1;
+                    color: $white-color;
+                } 
+            } 
+        }    
+    }
+    & .nav-right-item{
+        display: flex;
+        align-items: center;
+        & .theme-btn{
+            &.style-one{
+                padding: 18px 30px;
+            }
+        }
+    }
+}
+
+
+/*  Hero Section  */ 
+
+.hero-wb{
+    & .hero-wrapper{
+        padding: 200px 0 90px;
+        @include respond(xm){
+            padding: 150px 0 90px;
+        }
+    }
+    & .hero-content{
+        & h1{
+            color: $white-color;
+            margin-bottom: 30px;
+            @include respond(tablet){
+                font-size: 65px;
+                line-height: 80px;
+            }
+            @include respond(xm){
+                font-size: 55px;
+                line-height: 70px;
+            }
+            @include respond(phone){
+                font-size: 35px;
+                line-height: 50px;
+            }
+        }
+        & p{
+            max-width: 850px;
+            color: $white-color;
+            font-size: 18px;
+            font-weight: 500;
+            margin: 0 auto 30px;
+            @include respond(xm){
+                font-size: 16px;
+            }
+        }
+        & .hero-button{
+            & a{
+                &:not(:last-child){
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+    & .hero-image{
+        & img{
+            border-radius: 15px;
+            box-shadow: 0px 10px 50px 20px rgba(0, 0, 0, 0.20);
+        }
+    }
+}
+
+/*  Company Section  */
+
+.company-wb{
+    & .text-box{
+        text-align: left;
+        & span{
+            background-color: $primary-color;
+            padding: 7px 20px;
+            border-radius: 10px;
+            font-weight: 600;
+            border: 1px solid rgba(0, 68, 70, 0.10);
+            letter-spacing: -0.36px;
+            line-height: 20px;
+            color: $white-color;
+        }
+    }
+}
+
+/*  Company Section  */
+
+.builder-layer-wb{
+    & .text-block{
+        border-left: 3px solid $primary-color;
+        padding-left: 20px;
+        & h5{
+            margin-bottom: 7px;
+        }
+    }
+}
+
+/* Adaptive Design */ 
+
+.adaptive-design-wb{
+    & .sasly-image-box{
+        & img{
+            border-radius: 20px;
+        }
+    }
+}
+
+/* Popup Section */ 
+
+.popup-sec-wb{
+    & .popup-bg-wrapper{
+        padding: 50px 50px 20px;
+        border-radius: 20px;
+        @include respond(phone){
+            padding: 50px 30px 20px;
+        }
+    }
+}
+
+/*  Faqs Section  */ 
+
+.accordion-item{
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    & .accordion-header {
+        & .accordion-title{
+            padding: 20px 0 30px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.10);
+            &:after{
+                border: none;
+            }
+        }
+    }
+}
+
+/*  Footer CSS */ 
+
+.website-builder-footer{
+    padding: 30px;
+    color: #bbb;
+    @include respond(tablet){
+        padding: 0;
+    }
+    @include respond(xm){
+        padding: 0;
+    }
+    & .footer-top{
+        & .footer-content{
+            & .footer-button{
+                & a{
+                    margin-bottom: 10px;
+                    &:not(:last-child){
+                        margin-right: 25px;
+                        @include respond(xs){
+                            margin-right: 0;
+                        }
+                    }
+                }
+            }
+            & h2{
+                @include respond(xm){
+                    font-size: 36px;
+                    line-height: 45px;
+                }
+                @include respond(phone){
+                    font-size: 30px;
+                    line-height: 40px;
+                }
+            }
+            & .theme-btn{
+                &.style-two{
+                    border: 1px solid rgba(255, 255, 255, 0.40);
+                    border-radius: 12px;
+                    &:hover{
+                        border-color: transparent;
+                    }
+                }
+            }
+        }
+    }
+    & .footer-bottom{
+        border-radius: 10px;
+        background-color: rgba(0, 0, 0, 0.60);
+    }
+    & .footer-copyright{
+        border-color: rgba(255, 255, 255, 0.10);
+    }
+}
+.footer-widget{
+    & h4.widget-title{
+        color: $white-color;
+    }
+    & .footer-content{
+        & .footer-nav{
+            & a{
+                &:hover{
+                    color: $primary-color;
+                }
+            }
+        }
+        & p{
+            &:hover{
+                & a{
+                    color: $primary-color;
+                }
+            }
+        }
+        & .social-link{
+            & li{
+                & a{
+                    background-color: #2A2A2A;
+                    border: none;
+                    color: $white-color;
+                }
+            }
+        }
+    }
+}
+.back-to-top{
+    bottom: 100px;
+    @include respond(xm){
+        bottom: 70px;
+    }
+}
+
+
+
+
+
+/* Page Banner */
+
+.page-hero-ss{
+    padding: 207px 0 140px;
+    @include respond(xm){
+        padding: 140px 0 80px;  
+    }
+    & .page-content{
+        & h1.page-title{
+            color: $white-color;
+        }
+        & h3.page-title{
+            color: $white-color;
+        }
+        & .breadcrumb-link{
+            & li{
+                & a{
+                    color: $white-color;
+                }
+            }
+        }
+    }
+}
+
+/* Contact Page css */ 
+
+.contact-ss{
+    & .sasly-iconic-box{
+        &.style-twelve{
+            background-color: #e5f5ff;
+        }   
+    }
+}
+

@@ -1,0 +1,468 @@
+
+/*----- 
+
+-----------------------------------------------------------------------------------
+Template Name: Sasly - Multipurpose Landing Page PHP Template
+Page Name: Home Software
+Description: Landing page for software products, tailored to feature software functionalities, user benefits, and integrations.
+-----------------------------------------------------------------------------------
+
+----*/ 
+
+
+
+
+
+@import "../../abstract";
+
+/* Common CSS */ 
+
+:root {
+    --primary-color: #9F58EB;
+    --secondary-color: #A6EF67;
+    --primary-black-color: #1F1F1F;
+}
+
+.sub-heading{
+    background-color: #f4ebfd;
+}
+
+.theme-btn{
+    &.style-one{
+        padding: 22px 50px;
+    }
+}
+
+main{
+    padding-top: 30px;
+    @include respond(laptop){
+        padding-top: 20px;
+    }
+    @include respond(xm){
+        padding-top: 0;
+    }
+}
+
+
+/* Header CSS */ 
+
+.header-area{
+    max-width: 1780px;
+    margin: 0 auto;
+    @include respond(laptop){
+        max-width: 1130px;
+    }
+    @include respond(tablet){
+        max-width: 920px;
+    }
+    @include respond(xm){
+        max-width: 600px;
+    }
+    @include respond(xs){
+        max-width: 350px;
+    }
+}
+
+/* Hero CSS */ 
+
+.hero-ss{
+    background-color: #F8FAFB;
+    margin: 0 30px 0;
+    border: 1px solid rgba(38, 39, 43, 0.10);
+    border-radius: 20px;
+    padding: 280px 0 0;
+    @include respond(laptop){
+        margin: 0 20px 0;
+    }
+    @include respond(xm){
+        margin:  0;
+        border-radius: 0 0 20px 20px;
+    }
+    @include respond(xs){
+        padding: 180px 0 0;
+    }
+    & .hero-content{
+        padding-bottom: 130px;
+        & .sub-heading{
+            background-color: $primary-color;
+            color: $white-color;
+            & i{
+                color: $white-color;
+            }
+        }
+        & h1{
+            font-size: 150px;
+            line-height: 100%; /* 150px */
+            letter-spacing: -4.5px;
+            margin-bottom: 30px;
+            @include respond(laptop){
+                font-size: 110px;
+            }
+            @include respond(tablet){
+                font-size: 100px;
+            }
+            @include respond(xm){
+                font-size: 80px;
+            }
+            @include respond(xs){
+                font-size: 42px;
+                line-height: 55px;
+            }
+        }
+        & p{
+            max-width: 820px;
+            color: $heading-color;
+            margin: 0 auto 40px;
+        }
+        & .theme-btn{
+            border-radius: 12px;
+            @include respond(xs){
+                margin-bottom: 10px;
+            }
+            &.style-one{
+                background-color: $secondary-color;
+                color: $heading-color;
+                padding: 19px 40px;
+                font-weight: 700;
+                margin-right: 15px;
+                
+            }
+            &.style-two{
+                border-color: #26272B;
+                padding: 10px 35px;
+                &:hover{
+                    border-color: transparent;
+                }
+            }
+        }
+    }
+    & .hero-image{
+        margin-bottom: -90px;
+        & img{
+            border-radius: 30px;
+            @include respond(xs){
+                border-radius: 10px;
+            }
+        }
+    }
+}
+
+.features-two-ss{
+    & .feature-image-box{
+        & img{
+            border-radius: 10px;
+            border: 1px solid rgba(38, 39, 43, 0.10);
+            background-color: $white-color;
+        }
+    }
+}
+
+/* Pricing CSS */ 
+
+.pricing-ss{
+    & .table-responsive{
+        &::-webkit-scrollbar {
+            width: 2px;
+        }
+    }
+    & .table-area{
+        @include respond(xm){
+            width: 1200px;
+        }
+    }
+    & .pricing-wrapper{
+        border-radius: 10px;
+        border: 1px solid rgba(38, 39, 43, 0.10);
+        background-color: $white-color;
+        box-shadow: 10px 4px 60px 0px rgba(193, 193, 193, 0.25);
+    }
+}
+
+/* Testimonial CSS */ 
+
+
+.testimonial-ss{
+    border-radius: 20px;
+    margin: 0 30px;
+    @include respond(phone){
+        margin: 0;
+        border-radius: 0;
+    }
+    & .testimonial-slider{
+        margin-right: -50%;
+        @include respond(xm){
+            margin-right: 0;
+        }
+    }
+}
+
+/* Intregration CSS */ 
+
+.intregration-tools-ss{
+    & .tool-item{
+        background-color: #F8FAFB;
+        & h5{
+            color: $heading-color;
+        }
+    }
+}
+
+
+
+
+/* Software CSS */ 
+
+.software-footer{
+    background-color: $primary-black-color;
+    & .newsletter-wrapper{
+        padding: 100px 20px;
+        & .section-content-box{
+            & h2{
+                font-size: 52px;
+                font-weight: 600;
+                letter-spacing: -1.04px;
+                margin-bottom: 30px;
+                @include respond(laptop){
+                    font-size: 46px;
+                }
+                @include respond(tablet){
+                    font-size: 32px;
+                    line-height: 45px;
+                }
+                @include respond(xm){
+                    font-size: 32px;
+                    line-height: 45px;
+                }
+            }
+            & h5{
+                font-weight: 500;
+                color: #B8B8B8;
+                margin-bottom: 40px;
+                @include respond(tablet){
+                    font-size: 16px;
+                }
+                @include respond(xm){
+                    font-size: 16px;
+                    line-height: 35px;
+                }
+            }
+            & .theme-btn{
+                &.style-one{
+                    font-size: 16px;
+                    &:hover{
+                        background-color: $secondary-color;
+                        color: $heading-color;
+                    }
+                }
+            }
+        }
+    }
+    & .footer-copyright{
+        border-color: rgba(255, 255, 255, 0.10);
+        & .copyright-text{
+            & p{
+                & span{
+                    color: $white-color;
+                }
+            }
+        }
+        & .copyright-nav{
+            & ul{
+                & li{
+                    & a{
+                        &:hover{
+                            color: $white-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.footer-widget {
+    color: #bbb;
+    & h4.widget-title{
+        color: $white-color;
+    }
+    & .footer-content{
+        & .social-link{
+            & li{
+                & a{
+                    border: 1px solid rgba(255, 255, 255, 0.10);
+                    color: $white-color;
+                }
+            }
+        }
+    }
+    &.footer-nav-widget{
+        & ul{
+            & li{
+                & a{
+                    &:hover{
+                        color: $primary-color;
+                    }
+                }
+            }
+        }
+    }
+    &.footer-newsletter-widget{
+        & .footer-content{
+            & .form_control{
+                border: 1.2px solid rgba(255, 255, 255, 0.10);
+                background-color: #2A2A2A;
+                color: #bbb;
+                &::placeholder{
+                    color: #bbb;
+                }
+            }
+            & .theme-btn{
+                padding: 13px 20px;
+                &:hover{
+                    background-color: $secondary-color;
+                    color: $heading-color;
+                }
+            }
+        }
+    }
+}
+
+
+/* Page Banner */ 
+
+.page-hero-ss{
+    padding: 215px 0 100px;
+    margin: 0 30px 0;
+    border-radius: 20px;
+    @include respond(xs){
+        padding: 175px 0 80px;
+    }
+    @include respond(xs){
+        margin: 0 5px 0;
+        border-radius: 15px;
+    }
+}
+
+/* About Page CSS */ 
+
+.about-ss{
+    & .section-title{
+        padding-right: 40px;
+        @include respond(phone){
+            padding-right: 0;
+        }
+    }
+    & .section-content-box{
+        @include respond(tablet){
+            max-width: 670px;
+            margin: 0 auto 50px;        
+        }
+    }
+    & .section-image-box{
+        position: relative;
+        max-width: 630px;
+        height: 460px;
+        text-align: right;
+        & .shape{
+            position: absolute;
+            top: 0;
+            left: 20px;
+            
+        }
+        & .image-one{
+            @include respond(phone){
+                padding-left: 30px;
+            }
+            & img{
+                border-radius: 20px;
+                box-shadow: 7.023px 7.023px 50.161px 10.032px rgba(159, 88, 235, 0.15);
+            }
+        }
+        & .image-two{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            z-index: 1;
+            @include respond(phone){
+                left: 30px;
+            }
+            & img{
+                border-radius: 20px;
+                box-shadow: -5px 0px 50px 20px rgba(159, 88, 235, 0.10);
+            }
+        }
+        @include respond(tablet){
+            margin: 0 auto 50px;
+        }
+    }
+}
+
+.why-choose-ss{
+    .sasly-iconic-box.style-seven {
+        margin-left: auto;
+        filter: drop-shadow(10px 4px 30px rgba(58, 95, 255, 0.15));
+    }
+}
+
+.counter-ss{
+    padding: 30px;
+    @include respond(phone){
+        padding: 15px;
+    }
+    & .counter-wrapper{
+        border-radius: 30px;
+    }
+}
+
+/* Product CSS */ 
+
+.product-ss{
+    & .sasly-iconic-box{
+        &.style-eight{
+            background-color: $white-color;
+            border-radius: 10px;
+            border: 1px solid rgba(38, 39, 43, 0.10);
+            box-shadow: 10px 4px 60px 0px rgba(193, 193, 193, 0.25);
+            & .icon{
+                background-color: transparent;
+                border: 1px solid rgba(38, 39, 43, 0.10);
+            }
+        }
+    }
+}
+
+/* Blog Page CSS */ 
+
+.blog-standard-ss{
+    & .blog-quote-post-item{
+        background-color: rgb(159 88 235 / 8%);
+    }
+}
+
+/*  Contact SS  */ 
+
+.contact-ss{
+    & .sasly-iconic-box{
+        &.style-twelve{
+            background-color: #a764ec21;
+        }
+    }
+}
+
+/*  Company SS  */ 
+
+.company-ss{
+    border-top: 1px solid #e1e1e1;
+}
+
+/* Error Page css */
+
+.error-page{
+    padding: 130px 0;
+    @include respond(tablet){
+        padding: 100px 0;
+    }
+    @include respond(xm){
+        padding: 80px 0;
+    }
+}

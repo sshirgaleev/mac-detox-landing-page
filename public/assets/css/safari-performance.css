@@ -1,0 +1,65 @@
+/**
+ * Safari Performance Optimization
+ * Средние оптимизации - баланс между красотой и скоростью
+ */
+
+/* Исправление прозрачности header в Safari */
+.header-nine:not(.sticky) {
+    background-color: transparent !important;
+}
+
+/* Оптимизация для Safari */
+@supports (-webkit-overflow-scrolling: touch) {
+    /* Плавный скролл */
+    body {
+        -webkit-overflow-scrolling: touch;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* Hardware acceleration для анимируемых элементов */
+    [data-aos],
+    .aos-animate,
+    .slick-slider,
+    .company-slider,
+    .testimonial-slider {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+    }
+
+    /* Hardware acceleration для интерактивных элементов */
+    a,
+    button,
+    .theme-btn,
+    .read-more,
+    .ss-iconic-box,
+    .sasly-info-box {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+    }
+
+    /* Оптимизация AOS анимаций - чуть быстрее */
+    [data-aos] {
+        transition-duration: 0.5s !important;
+    }
+
+    /* Быстрый preloader */
+    .preloader {
+        transition: opacity 0.2s ease !important;
+    }
+
+    /* Плавные hover эффекты */
+    a:hover,
+    button:hover {
+        transition-duration: 0.5s !important;
+    }
+}
+
+/* Оптимизация для мобильных Safari */
+@supports (-webkit-touch-callout: none) {
+    body {
+        -webkit-text-size-adjust: 100%;
+    }
+}

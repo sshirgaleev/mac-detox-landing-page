@@ -1,0 +1,891 @@
+/*---
+
+-----------------------------------------------------------------------------------
+Template Name: Sasly - Multipurpose Landing Page PHP Template
+Page Name: Home AI
+Description: Main landing page for AI products, showcasing key features, benefits, and CTA sections.
+-----------------------------------------------------------------------------------
+
+---*/
+
+
+@import "../../abstract";
+
+/* Common CSS */ 
+
+:root {
+    --primary-color: #FE7587;
+    --primary-black-color: #0A0118;
+}
+.theme-btn{
+    &.style-one{
+        padding: 13px 20px;
+        color: $white-color;
+        background-size: 150% 100%;
+        background-image: linear-gradient(90deg, #FE7587 0%, #7D42DC 100%);
+        transition:all .3s ease-in-out;
+        &:hover{
+            color: $white-color;
+            background-position: 100% 0;
+            transition: all .35s ease-in-out;
+        }
+    }
+}
+.sub-heading{
+    position: relative;
+    color: $white-color;
+    z-index: 1;
+    overflow: hidden;
+    border-radius: 14px;
+    border: 2px solid #FE7587;
+    background: rgba(255, 255, 255, 0.10);
+}
+.section-title{
+    & h2{
+        color: $white-color;
+        letter-spacing: -1.04px;
+        margin-bottom: 30px;
+    }
+    & p{
+        color: $white-color;
+        max-width: 730px;
+        margin: 0 auto;
+    }
+}
+body{
+    background-color: $primary-black-color;
+}
+
+
+
+/* Hero Section CSS */ 
+
+.hero-ai{
+    position: relative;
+    z-index: 1;
+    padding: 200px 0 150px;
+    & .bottom-bg{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 370px;
+        background: linear-gradient(0deg, rgba(125, 66, 220, 0.07) 0%, rgba(125, 66, 220, 0.00) 69.58%);
+    }
+    & .shape{
+        position: absolute;
+        z-index: -1;
+        &.shape-one{
+            top: 0;
+            left: 0;
+        }
+        &.shape-two{
+            top: 20%;
+            right: 0;
+        }
+    }
+    & .element{
+        position: absolute;
+        z-index: -1;
+        @include respond(xm){
+            display: none;
+        }
+        &.el-one{
+            left: 8%;
+            animation: spin 6s linear infinite;
+            @include respond(laptop){
+                left: 4%;
+            }
+        }
+        &.el-two{
+            right: 8%;
+            animation: spin 7s linear infinite;
+            @include respond(laptop){
+                right: 4%;
+            }
+        }
+        &.el-three{
+            top: 34%;
+            left: 8%;
+            animation: spin 8s linear infinite;
+            @include respond(laptop){
+                left: 4%;
+            }
+        }
+        &.el-four{
+            top: 38%;
+            right: 8%;
+            animation: spin 9s linear infinite;
+            @include respond(laptop){
+                right: 4%;
+            }
+        }
+    }
+    & .hero-content{
+        & h1{
+            font-size: 85px;
+            font-weight: 600;
+            line-height: 120%;
+            letter-spacing: -2.55px;
+            color: $white-color;
+            text-transform: capitalize;
+            margin-bottom: 40px;
+            & span{
+                line-height: 1.3;
+                & b{
+                    font-weight: 600;
+                    background: linear-gradient(90deg, #A150C4 0%, #8244D9 100%);
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                }
+            }
+            @include respond(xm){
+                font-size: 45px;
+                line-height: 60px;
+            }
+            @include respond(phone){
+                font-size: 35px;
+                line-height: 50px;
+            }
+        }
+        & h5{
+            max-width: 850px;
+            margin: 0 auto 40px;
+            font: 600 20px $body-font;
+            line-height: 35px; 
+            color: $white-color;
+            @include respond(phone){
+                font-size: 16px;
+                line-height: 30px;
+            }
+        }
+        & .hero-search{
+            & form{
+                position: relative;
+                max-width: 630px;
+                margin: 0 auto;
+                & label{
+                    position: absolute;
+                    top: 15px;
+                    left: 30px;
+                    color: $white-color;
+                }
+                & input{
+                    padding: 14px 170px 14px 60px;
+                    border-radius: 10px;
+                    border: 1px solid rgba(255, 255, 255, 0.10);
+                    background-color: rgba(255, 255, 255, 0.10);
+                    color: #7B7B7B;
+                    &::placeholder{
+                        color: #7B7B7B;
+                    }
+                }
+                & .theme-btn{
+                    position: absolute;
+                    top: 10px;
+                    right: 10px;
+                }
+            }
+        }
+        & .check-list{
+            & li{
+                color: $white-color;
+                @include respond (xm){
+                    font-size: 14px;
+                }
+                @include respond(phone){
+                    justify-content: center;
+                }
+            }
+        }
+    }
+    & .hero-image{
+        position: relative;
+        z-index: 1;
+        padding-top: 140px;
+        & .shape-bg{
+            position: absolute;
+            top: 15%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80%;
+            height: 220px;
+            border-radius: 220px;
+            background: radial-gradient(50% 50% at 50% 50.77%, #FE7587 0%, #7D42DC 100%);
+            filter: blur(30px);
+            z-index: -1;
+        }
+        & img{
+            border-radius: 20px;
+        }
+    }
+}
+
+/* Client Section CSS */ 
+
+.client-ai{
+    & .section-title{
+        & h5{
+            font-weight: 400;
+            font-size: 18px;
+            color: rgba(255, 255, 255, 0.45);
+        }
+    }
+}
+
+
+/* Features Section CSS */ 
+
+
+.features-ai{
+    position: relative;
+    & .element{
+        position: absolute;
+        z-index: -1;
+        @include respond(phone){
+            display: none;
+        }
+        &.el-one{
+            top: 10%;
+            left: 8%;
+            animation: spin 6s linear infinite;
+        }
+        &.el-two{
+            top: 12%;
+            right: 8%;
+            animation: spin 7s linear infinite;
+        }
+        &.el-three{
+            bottom: 24%;
+            left: 8%;
+            animation: spin 8s linear infinite;
+        }
+        &.el-four{
+            bottom: 34%;
+            right: 4%;
+            animation: spin 9s linear infinite;
+        }
+    }
+    & .section-content-box{
+        & .sasly-iconic-box{
+            @include respond(tablet){
+                max-width: 100%;
+            }
+            @include respond(xm){
+                max-width: 100%;
+            }
+        }
+    }
+    & .section-image-box{
+        padding: 25px 30px;
+        border-radius: 10px;
+        background: linear-gradient(90deg, #FE7587 0%, #7D42DC 100%);
+        height: 565px;
+        @include respond(phone){
+            height: 350px;
+            padding: 20px 15px;
+        }
+        & img{
+            width: 100%;
+            height: 100%;
+            border-radius: 7px;
+        }
+    }
+}
+
+.section-content-box{
+    & .sasly-iconic-box{
+        &.style-seven{
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.10);
+            padding: 35px 40px 30px;
+            border-radius: 10px;
+            & .content{
+                & h4.title{
+                    color: $white-color;
+                    margin-bottom: 15px;
+                }
+                & i{
+                    background: linear-gradient(90deg, #FE7587 0%, #7D42DC 100%);
+                    font-size: 30px;
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    margin-right: 20px;
+                }
+                & p{
+                    color: rgba(255, 255, 255, 0.65);
+                }
+            }
+        }
+    }
+}
+
+/* Benefit Section CSS */ 
+
+.benefit-ai{
+    & .sasly-image-box{
+        text-align: center;
+    }
+}
+
+/* Features Section CSS */ 
+
+.testimonial-ai{
+    & .sasly-testimonial-item{
+        &.style-five{
+            margin-right: 25px;
+            direction: ltr;
+        }
+    }
+}
+
+
+/* Pricing Section CSS */ 
+
+.pricing-ai{
+    & .pricing-wrapper{
+        position: relative;
+        z-index: 2;
+        border-radius: 10px;
+        border: 1px solid rgba(255, 255, 255, 0.10);
+        background-color: #160E24;
+        &:after{
+            position: absolute;
+            content: '';
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            max-width: 940px;
+            width: 100%;
+            height: 290px;
+            border-radius: 219.5px;
+            background: radial-gradient(50% 50% at 50% 50.77%, #FE7587 0%, #7D42DC 100%);
+            filter: blur(50px);
+            z-index: -1;
+        }
+        @include respond(tablet){
+            background-color: transparent;
+            border: none;
+         }
+        @include respond(xm){
+           background-color: transparent;
+           border: none;
+        }
+    }
+    .pricing-item{
+        background-color: #160E24;
+        padding: 60px 65px 30px;
+        @include respond(laptop){
+            padding: 60px 45px 30px;
+        }
+        @include respond(tablet){
+            padding: 40px 35px;
+        }
+        @include respond(xm){
+            padding: 40px 35px;
+        }
+        @include respond(phone){
+            padding: 30px 25px;
+        }
+        &.item-border{
+            height: 100%;
+            border-left: 1px solid rgba(255, 255, 255, 0.10);
+            border-right: 1px solid rgba(255, 255, 255, 0.10);
+            @include respond(tablet){
+                height: auto;
+            }
+            @include respond(xm){
+                height: auto;
+            }
+        }
+    }
+}
+
+/* Integration Tools CSS */ 
+
+.integration-tools-ai{
+    & .section-title{
+        & h4{
+            font-size: 35px;
+            line-height: 45px;
+            color: $white-color;
+        }
+    }
+}
+
+/* Faq AI CSS */ 
+
+.faq-ai{
+    & .section-content-box{
+        & > p{
+            color: rgba(255, 255, 255, 0.65);
+            margin-bottom: 30px;
+        }
+    }
+    & .accordion-item{
+        padding: 15px 20px;
+        border-radius: 10px;
+        border: 1px solid rgba(255, 255, 255, 0.10);
+        background-color: rgba(255, 255, 255, 0.05);;
+        & .accordion-header{
+            & .accordion-title{
+                color: $white-color;
+                line-height: 25px;
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+                font-size: 18px;
+                font-weight: 600;
+                &  span.sn{
+                    margin-right: 8px;
+                }
+                &:after{
+                    flex: 0 0 auto;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    display: inline-flex;
+                    content: '\f067';
+                    font-family: 'Font Awesome 5 Pro';
+                    font-weight: 400;
+                    margin-left: auto;
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                    border: 1px solid rgba(16, 16, 16, 0.10);
+                    background-color: rgba(255, 255, 255, 0.05);
+                    color: $primary-color;
+                    transition: all .3s;
+                }
+            }
+            & .accordion-title[aria-expanded=true]{
+                &:after{
+                    border-color: #26272B;
+                    content: '\f068';
+                    color:$white-color;
+                }
+            }
+        }
+        & .accordion-content{
+            & p{
+                padding-top: 10px;
+                color: rgba(255, 255, 255, 0.65);
+            }
+        }
+    }
+}
+
+/* CTA AI CSS */ 
+
+.cta-ai{
+    .cta-wrapper{
+        padding: 30px 50px;
+        position: relative;
+        z-index: 1;
+        background: linear-gradient(270deg, #FE7587 0%, #7D42DC 100%);
+        overflow: hidden;
+        border-radius: 10px;
+        @include respond(phone){
+            padding: 30px 20px;
+        }
+        & .pattern-bg{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+    }
+    & .section-image-box{
+        position: relative;
+        max-width: 630px;
+        height: 475px;
+        z-index: 1;
+        margin-left: auto;
+        @include respond(tablet){
+            margin: 40px auto 0;
+        }
+        @include respond(phone){
+            display: none;
+        }
+        & .sasly-img_one{
+            position: absolute;
+            left: 0;
+            top: 0;
+            & img{
+                border-radius: 10px;
+                max-width: 275px;
+            }
+        }
+        & .sasly-img_two{
+            position: absolute;
+            right: 15px;
+            top: 15px;
+            & img{
+                border-radius: 10px;
+                max-width: 275px;
+            }
+        }
+        & .sasly-img_three{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            z-index: 1;
+            & img{
+                max-width: 275px;
+                border-radius: 10px;
+                box-shadow: 0px 10px 60px 0px rgba(0, 0, 0, 0.30);
+            }
+        }
+        & .sasly-img_four{
+            position: absolute;
+            left: 30px;
+            bottom: 40px;
+            z-index: -1;
+            & img{
+                border-radius: 10px;
+                max-width: 210px;
+            }
+        }
+        & .sasly-img_five{
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            & img{
+                border-radius: 10px;
+                max-width: 360px;
+            }
+        }
+    }
+    & .section-content-box{
+        @include respond(xm){
+            margin-bottom: 50px;
+        }
+        @include respond(phone){
+            margin-bottom: 0;
+        }
+        & h2{
+            color: $white-color;
+            margin-bottom: 35px;
+            @include respond(phone){
+                font-size: 32px;
+                line-height: 45px;
+                margin-bottom: 24px;
+            }
+        }
+        & > p{
+            color: $white-color;
+            margin-bottom: 50px;
+            @include respond(phone){
+                margin-bottom: 30px;
+            }
+        }
+        & .theme-btn{
+            &.style-one{
+                background: $white-color;
+                color: $heading-color;
+                padding: 22px 50px;
+            }
+        }
+        & .check-list{
+            & li{
+                color: $white-color;
+                & i{
+                    color: $white-color;
+                }
+            }
+        }
+    }
+}
+.cta-wrapper-two{
+    position: relative;
+    z-index: 1;
+    background: linear-gradient(270deg, #FE7587 0%, #7D42DC 100%);
+    padding: 40px 50px 20px;
+    border-radius: 20px;
+    @include respond(phone){
+        padding: 20px 15px 20px;
+    }
+    & .section-content-box{
+        @include respond(tablet){
+            text-align: center;
+        }
+        @include respond(xm){
+            text-align: center;
+        }
+    }
+    & .cta-button{
+        @include respond(tablet){
+            text-align: center;
+        }
+        @include respond(xm){
+            text-align: center;
+        }
+        & .theme-btn{
+            &.style-one{
+                padding: 18px 35px;
+                background: $white-color;
+                color: $heading-color;
+                &:hover{
+                    background: $primary-black-color;
+                    color: $primary-color;
+                }
+            }
+        }
+    }
+}
+
+
+
+/* Footer Widget */ 
+
+.footer-widget {
+    & h4.widget-title{
+        color: $white-color;
+    }
+    & .footer-content{
+        & .social-link{
+            & li{
+                & a{
+                    background-color: rgba(255, 255, 255, 0.05);
+                    border-color: rgba(255, 255, 255, 0.10);
+                    color: $white-color;
+                    &:hover{
+                        color: $heading-color;
+                    }
+                }
+            }
+        }
+    }
+    &.footer-newsletter-widget{
+        & .footer-content{
+            & .form-group{
+                & .form_control{
+                    border-radius: 10px;
+                    border: 1.2px solid rgba(255, 255, 255, 0.10);
+                    background: rgba(255, 255, 255, 0.05);
+                    color: $white-color;
+                }
+                & .theme-btn{
+                    &.style-one{
+                        padding: 13px 25px;
+                        font-size: 14px;
+                        border-radius: 8px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* AI Footer */ 
+
+.ai-footer{
+    color: $white-color;
+    & .newsletter-wrapper{
+        padding: 100px 20px;
+        & .section-content-box{
+            & h2{
+                font-size: 52px;
+                font-weight: 600;
+                letter-spacing: -1.04px;
+                margin-bottom: 30px;
+            }
+            & h5{
+                font-weight: 500;
+                color: #B8B8B8;
+                margin-bottom: 40px;
+            }
+        }
+    }
+    & .footer-copyright{
+        border-color: rgba(255, 255, 255, 0.10);
+        & .copyright-text{
+            & p{
+                color: #bbb;
+                & span{
+                    color: $white-color;
+                }
+            }
+        }
+        & .copyright-nav{
+            & ul{
+                & li{
+                    & a{
+                        color: #bbb;
+                        &:hover{
+                            color: $white-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/* Page Hero */ 
+
+.page-hero-ss{
+    padding: 207px 0 118px;
+    background-color: #042A1B;
+    @include respond(xm){
+        padding: 180px 0 80px;  
+    }
+    & .page-content{
+        & h1{
+            &.page-title{
+                color: $white-color;
+            }
+        }
+        & h3.page-title{
+            color: $white-color;
+        }
+        & .breadcrumb-link{
+            & li{
+                color: $white-color;
+                &.active{
+                    color: $primary-color;
+                }
+            }
+        }
+    }
+}
+
+
+/*  About Wrapper  */ 
+
+.ai-about-wrapper{
+    border-radius: 10px;
+    border: 1px solid #FE7587;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 50px 50px 0;
+    display: flex;
+    flex-wrap: wrap;
+    @include respond(tablet){
+        flex-direction: column;
+    }
+    @include respond(xm){
+        flex-direction: column;
+        padding: 50px 30px 0;
+    }
+    @include respond(phone){
+        flex-direction: column;
+        padding: 30px 15px 0;
+    }
+    & .section-content-box{
+        width: 47%;
+        @include respond(tablet){
+            width: 100%;
+        }
+        @include respond(xm){
+            width: 100%;
+        }
+        & .sasly-iconic-box{
+            &.style-seven{
+                @include respond(tablet){
+                    max-width: 100%;
+                }
+                @include respond(xm){
+                    max-width: 100%;
+                }
+            }
+        }
+    }
+    & .section-image-box{
+        width: 53%;
+        & img{
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        @include respond(laptop){
+            padding-left: 30px;
+        }
+        @include respond(tablet){
+            width: 100%;
+            text-align: center;
+        }
+        @include respond(xm){
+            width: 100%;
+            text-align: center;
+        }
+    }
+}
+
+
+/* Contact Page css */ 
+
+.contact-ss{
+    & .sasly-iconic-box{
+        &.style-twelve{
+            background-color: rgba(255, 255, 255, 0.05);
+            & .content{
+                & h5{
+                    color: $white-color;
+                }
+                & p{
+                    color: rgba(255, 255, 255, 0.65);
+                    & a{
+                        &:hover{
+                            color: $primary-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.contact-form-ss{
+    & .contact-wrapper{
+        background-color: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(31, 31, 31, 0.10);
+        filter: none;
+        & h3{
+            color: $white-color;
+        }
+        & p{
+            color: rgba(255, 255, 255, 0.70);
+        }
+        & .contact-form{
+            & .form_control{
+                color: $white-color;
+                background-color: rgb(10 1 24);
+                padding: 10px 20px;
+                &::placeholder{
+                    color: $white-color;
+                }
+            }
+            & .theme-btn{
+                &.style-one{
+                    padding: 18px 30px;
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}
+
+/* Error Page css */
+
+.error-page{
+    padding: 130px 0;
+    @include respond(xm){
+        padding: 100px 0;
+    }
+    & .section-content-box{
+        & .error-image{
+            margin-bottom: 90px;
+        }
+        & h1{
+            color: $white-color;
+        }
+        & h5{
+            color: rgba(255, 255, 255, 0.7);
+        }
+    }
+}

@@ -1,0 +1,684 @@
+/*---- 
+
+-----------------------------------------------------------------------------------
+Template Name: Sasly - Multipurpose Landing Page PHP Template
+Page Name: Home Fintech
+Description: Landing page focused on Fintech solutions, highlighting features relevant to financial services and technology.
+-----------------------------------------------------------------------------------
+
+----*/ 
+
+
+
+
+@import "../../abstract";
+
+/* Common CSS */ 
+
+:root {
+    --primary-color: #30E87A;
+    --primary-black-color: #1F1F1F;
+    --secondary-color: rgba(48, 232, 122, 0.15);
+}
+
+.sub-heading{
+    background-color: rgba(48, 232, 122, 0.10);
+    border: 2px solid rgba(16, 16, 16, 0.10);
+}
+
+.theme-btn{
+    &.style-one{
+        padding: 22px 50px;
+        color: $heading-color;
+        font-size: 16px;
+        transition: all .4s;
+        &:hover{
+            background-color: $heading-color;
+            color: $white-color;
+        }
+    }
+    &.style-two{
+        border-color: $heading-color;
+        color: $heading-color;
+    }
+}
+
+h2{
+    @include respond(phone){
+        font-size: 24px;
+        line-height: 40px;
+    }
+}
+
+/* Hero Section CSS */ 
+
+.hero-sf{
+    padding: 200px 0 130px;
+    border-radius: 20px;
+    overflow: hidden;
+    @include respond(xm){
+        padding: 170px 0 130px;
+    }
+    @include respond(phone){
+        padding: 150px 0 130px;
+    }
+    & .hero-content{
+        margin-bottom: 50px;
+        @include respond(tablet){
+            margin-top: 40px;
+            padding: 0 100px;
+            text-align: center;
+        }
+        @include respond(xm){
+            margin-top: 40px;
+            text-align: center;
+            padding: 0 15px;
+        }
+        & h1{
+            color: $white-color;
+            font-size: 60px;
+            line-height: 72px;
+            letter-spacing: -1.8px;
+            margin-bottom: 50px;
+            @include respond(laptop){
+                font-size: 50px;
+                line-height: 65px;
+            }
+            @include respond(phone){
+                font-size: 32px;
+                line-height: 45px;
+            }
+        }
+        & > h5{
+            color: $white-color;
+            font-weight: 500;
+            line-height: 35px; 
+            margin-bottom: 50px;
+        }
+        & .theme-btn{
+            &.style-one{
+                &:hover{
+                    background-color: $white-color;
+                    color: $heading-color;
+                }
+            }
+        }
+    }
+}
+
+.avatar-rating-box{
+    display: flex;
+    justify-content: space-between;
+    @include respond(tablet){
+        padding: 0 100px;
+    }
+    @include respond(xm){
+        padding: 0 15px;
+    }
+    @include respond(phone){
+        flex-direction: column;
+        justify-content: center;
+    }
+    & .rating-box{
+        display: flex;
+        align-items: center;
+        padding: 25px 35px;
+        background-color: #101010;
+        border: 1px solid rgba(255, 255, 255, 0.10);
+        max-width: 300px;
+        width: 100%;
+        border-radius: 10px;
+        @include respond(phone){
+            justify-content: center;
+            margin: 40px auto 0;
+        }
+        & .rating-text{
+            & h6{
+                color: $white-color;
+                margin-bottom: 5px;
+            }
+            & ul.ratings{
+                & li{
+                    display: inline-block;
+                    color: #FCA326;
+                }
+            }
+        }
+        & .rate{
+            margin-left: auto;
+            font-size:50px;
+            font-family: $heading-font;
+            font-weight: 600;
+            letter-spacing: -4.16px;
+            color: $white-color;
+            line-height: normal;
+        }
+    }
+}
+.author-box{
+    @include respond(phone){
+        margin: 0 auto;
+    }
+    & h5{
+        color: $white-color;
+        margin-bottom: 20px;
+    }
+    & .author-list{
+        display: inline-flex;
+        flex-wrap: wrap;
+        align-items: center;
+        & li{
+            &:not(:first-child){
+                margin-left: -10px;
+            }
+            & img{
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                border: 2px solid $white-color;
+            }
+            & .add-author-btn{
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: $white-color;
+                font-size: 24px;
+                color: $heading-color;
+                & i{
+                    transform: rotate(-45deg);
+                }
+            }
+        }
+    }
+}
+
+.hero-image-box{
+    position: relative;
+    height: 580px;
+    max-width: 730px;
+    margin-right: -200px;
+    margin-left: 100px;
+    @include respond(laptop){
+        max-width: 600px;
+        margin-right: -100px;
+        margin-left: 0;
+    }
+    @include respond(tablet){
+        margin-top: 40px;
+        text-align: center;
+    }
+    @include respond(xm){
+        margin-top: 40px;
+        text-align: center;
+        margin-right: 0;
+        margin-left: 0;
+    }
+    @include respond(phone){
+        height: auto;
+    }
+    & .hero_image-one{
+        position: absolute;
+        top: 0;
+        right: 0;
+        & img{
+            border-radius: 10px;
+        }
+        @include respond(tablet){
+            position: relative;
+            top: auto;
+            right: auto;
+        }
+        @include respond(xm){
+            position: relative;
+            top: auto;
+            right: auto;
+        }
+    }
+    & .hero_image-two{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        @include respond(tablet){
+            display: none;
+        }
+        @include respond(xm){
+            display: none;
+        }
+    }
+}
+
+/* Client Section CSS */ 
+
+
+.client-sf{
+    & h5{
+        color: $white-color;
+        font-size: 18px;
+        font-weight: 600;
+        margin-bottom: 40px;
+    }
+    & .company-slider{
+        margin-left: -40px;
+        margin-right: -40px;
+        & .slick-slide{
+            margin-left: 40px;
+            margin-right: 40px;
+        }
+    }
+}
+
+/* Features Section CSS */ 
+
+.key-features-sf{
+    & .sasly-card-item{
+        &.style-three{
+            & .content{
+                padding-top: 40px;
+            }
+        }
+    }
+}
+
+/* Benefit Section CSS */ 
+
+.benefit-sf{
+    & .section-content-box{
+        max-width: 530px;
+        & p{
+            margin-bottom: 35px;
+        }
+    }
+    & .sasly-image-box{
+        position: relative;
+        height: 470px;
+        @include respond(xm){
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        & .image-one{
+            position: absolute;
+            top: 0;
+            left: 0;
+            & img{
+                box-shadow: 10px 4px 30px 0px rgba(153, 153, 153, 0.25);
+                border-radius: 10px;
+            }
+        }
+        & .image-two{
+            position: absolute;
+            right: 30px;
+            bottom: 0;
+            z-index: 1;
+            & img{
+                box-shadow: 10px 4px 60px 0px rgba(135, 135, 135, 0.25);
+                border-radius: 10px;
+            }
+        }
+    }
+}
+
+
+
+/* Why Choose Section CSS */ 
+
+.why-choose-sf{
+    margin: 0 30px;
+    border-radius: 15px;
+    border: 1px solid rgba(16, 16, 16, 0.15);
+    @include respond(phone){
+        margin: 0;
+        border-radius: 0;
+        border: none;
+    }
+}
+
+
+/* Features Section CSS */ 
+
+
+.features-sf-two{
+    & .sasly-image-box{
+        padding-right: 90px;
+        @include respond(xm){
+            padding-right: 0;
+        }
+        & img{
+            border: 1px solid $heading-color;
+            border-radius: 10px;
+        }
+    }
+    & .section-content-box{
+        & h2{
+            margin-bottom: 35px;
+            font-size: 52px;
+            font-weight: 600;
+            line-height: normal;
+            letter-spacing: -1.04px;
+            @include respond(laptop){
+                font-size: 50px;
+            }
+            @include respond(xs){
+                font-size: 24px;
+                line-height: 40px;
+            }
+        }
+        & p{
+            margin-bottom: 50px;
+        }
+    }
+    & .sasly-iconic-box{
+        &.style-four{
+            & .icon{
+                color: $heading-color;
+            }
+        }
+    }
+}
+
+/* Pricing Section CSS */ 
+
+.pricing-sf{
+    margin: 0 30px;
+    border-radius: 15px;
+    border: 1px solid rgba(16, 16, 16, 0.15);
+    & .pricing-item{
+        &.style-two{
+            filter: none;
+        }
+    }
+    @include respond(phone){
+        margin: 0;
+        border-radius: 0;
+        border: none;
+    }
+}
+
+
+/* Faq Section CSS */ 
+
+
+.faq-sf{
+    & .section-content-box{
+        & > p{
+            margin-bottom: 30px;
+        }
+        & .theme-btn{
+            &.style-two{
+                &:hover{
+                    color: $heading-color;
+                }
+            }
+        }
+    }
+}
+
+/* Testimonial Section CSS */ 
+
+.testimonial-sf{
+    margin: 0 30px;
+    padding-left: 65px;
+    padding-right: 65px;
+    border-radius: 15px;
+    border: 1px solid rgba(16, 16, 16, 0.15);
+    @include respond(phone){
+        margin: 0;
+        border-radius: 0;
+        border: none;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    & .testimonial-slider{
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+    & ul.slick-dots{
+        text-align: center;
+        margin-top: 65px;
+        & li{
+            &.slick-active{
+                & button{
+                    border-color: #101010;
+                }
+            }
+            & button{
+                position: relative;
+                width: 20px;
+                height: 20px;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: transparent;
+                border: 1px solid transparent;
+                &:after{
+                    position: absolute;
+                    content: '';
+                    width: 5px;
+                    height: 5px;
+                    border-radius: 50%;
+                    background-color: $heading-color;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%,-50%);
+                }
+            }
+        }
+    }
+}
+
+/* CTA Section CSS */ 
+
+.cta-sf{
+    & .cta-wrapper{
+        padding-left: 70px;
+        padding-right: 70px;
+        border-radius: 15px;
+        border: 1px solid rgba(38, 39, 43, 0.10);
+        @include respond(phone){
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+    }
+    & .section-content-box{
+        & h2{
+            letter-spacing: -1.04px;
+            color: $white-color;
+            margin-bottom: 40px;
+        }
+        & p{
+            color: $white-color;
+            margin-bottom: 40px;
+            max-width: 480px;
+            @include respond(tablet){
+                margin: 0 auto 40px;
+            }
+            @include respond(xm){
+                margin: 0 auto 40px;
+            }
+        }
+        & .check-list{
+            & li{
+                font-weight: 600;
+                font-size: 18px;
+                color: $white-color;
+            }
+        }
+    }
+}
+
+
+/* Footer CSS */ 
+
+
+.footer-widget{
+    & .footer-content{
+        & ul{
+            & li{
+                & a{
+                    &:hover{
+                        color: $primary-color;
+                    }
+                }
+            }
+        }
+        & .social-link{
+            & a{
+                background-color: transparent;
+                border: 1px solid $border-color;
+                &:hover{
+                    border-color: transparent;
+                    background-color: $primary-color;
+                    color: $heading-color;
+                }
+            }
+        }
+    }
+}
+
+.footer-newsletter-widget{
+    & .footer-content{
+        & .form-group{
+            & .form_control{
+                border-color: rgba(16, 16, 16, 0.10);
+                background-color: #FAFAFA;
+            }
+        }
+        & .theme-btn{
+            color: $heading-color;
+            &:hover{
+                color: $white-color;
+            }
+        }
+    }
+}
+
+.footer-copyright{
+   border-top: 1px solid rgba(16, 16, 16, 0.10);
+    & .copyright-text{
+        & p{
+            & span{
+                color: #101010;
+            }
+        }
+    }
+    & .copyright-nav{
+        & ul{
+            & li{
+                & a{
+                    &:hover{
+                        color: #111111;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+/* Page Banner CSS */
+
+.page-hero-ss{
+    padding: 235px 0 135px;
+    @include respond(xm){
+        padding: 200px 0 130px;
+    }
+    @include respond(xs){
+        padding: 165px 0 80px;
+    }
+    & .page-content{
+        & h1{
+            &.page-title{
+                color: $white-color;
+            }
+        }
+        & h3.page-title{
+            color: $white-color;
+        }
+        & .breadcrumb-link{
+            & li{
+                color: $white-color;
+                &.active{
+                    color: $primary-color;
+                }
+            }
+        }
+    }
+}
+
+.trusted-solutions-sf{
+    & .sasly-iconic-box{
+        &.style-three{
+            & .icon{
+                color: $heading-color;
+            }
+        }
+    }
+}
+
+.features-ss{
+    & .sasly-card-item{
+        &.style-three{
+            background-color: #fafafa;
+            & .content{
+                padding-bottom: 33px;
+            }
+        }
+    }
+}
+
+.solutions-sf{
+    & .sasly-iconic-box{
+        &.style-five{
+            display: flex;
+            align-items: flex-start;
+            & .icon{
+                margin-right: 35px;
+            }
+            & .content{
+                margin-top: -7px;
+                & h4{
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+}
+
+
+
+/* Blog Page CSS */ 
+
+.blog-standard-ss{
+    & .blog-quote-post-item{
+        background-color: rgba(91, 233, 146, 0.05);
+    }
+}
+
+.blog-post-item{
+    &.style-three{
+        & .post-content{
+            & .post-meta{
+                & span.category{
+                    & a{
+                        color: $primary-black-color;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/* Contact Page css */ 
+
+.contact-ss{
+    & .sasly-iconic-box{
+        &.style-twelve{
+            background-color: rgb(91 233 146 / 5%);
+        }
+    }
+}

@@ -1,604 +1,1064 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <!--====== Required meta tags ======-->
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<head>
-    <!-- ========== Meta Tags ========== -->
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="MacDetox">
-    <meta name="description" content="MacDetox - Reclaim gigabytes of wasted space on your Mac. Clean invisible junk, uninstall apps completely, and see what's eating your storage.">
-    <!-- ======== Page title ============ -->
-    <title>MacDetox - Clean Your Mac in Seconds</title>
-    <!-- ========== Favicon Icon ========== -->
-    <link rel="shortcut icon" href="favicon.ico">
-    <!-- ===========  All Stylesheet ================= -->
-    <!--  Icon css plugins -->
-    <link rel="stylesheet" href="assets/css/icons.css">
-    <!--  animate css plugins -->
-    <link rel="stylesheet" href="assets/css/animate.css">
-    <!--  slick css plugins -->
-    <link rel="stylesheet" href="assets/css/slick.css">
-    <!--  magnific-popup css plugins -->
-    <link rel="stylesheet" href="assets/css/magnific-popup.css">
-    <!-- metis menu css file -->
-    <link rel="stylesheet" href="assets/css/metismenu.css">
-    <!--  Bootstrap fcss plugins -->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <!--  main style css file -->
-    <link rel="stylesheet" href="assets/css/style.css">
-    <!-- template main style css file -->
-    <link rel="stylesheet" href="style.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js"></script>
-    <style>
-        /* Force FAQ accordion to be 100% visible */
-        #mainFAQ,
-        #mainFAQ *,
-        #mainFAQ .accordion-item,
-        #mainFAQ .accordion-button,
-        #mainFAQ .accordion-body,
-        #mainFAQ .accordion-header,
-        #mainFAQ h2,
-        #mainFAQ button {
-            opacity: 1 !important;
-            visibility: visible !important;
-            animation: none !important;
-            -webkit-animation: none !important;
-            filter: none !important;
-        }
-    </style>
+        <!--====== Primary Meta Tags ======-->
+        <title>MacDetox — Deep Clean for macOS. Remove Junk, Free Space, Uninstall Apps Completely</title>
+        <meta name="author" content="MacDetox">
+        <meta name="description" content="MacDetox deeply scans your Mac, removes hidden junk, uninstalls apps without leftovers, and frees real disk space. Fast, safe, and built for macOS 11+." />
+        <meta name="keywords" content="mac cleaner, macos cleanup, uninstall apps mac, remove junk mac, free disk space mac, mac optimization, mac os cleaner, delete cache mac, mac storage tool, mac maintenance" />
 
-</head>
+        <!--====== Open Graph / Facebook / iMessage ======-->
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://macdetox.com/" />
+        <meta property="og:title" content="MacDetox — Deep Clean for macOS" />
+        <meta property="og:description" content="Clean hidden junk, remove leftover files, uninstall apps fully, and free real storage. macOS 11+ supported." />
+        <meta property="og:image" content="https://macdetox.com/preview.jpg" />
+        <meta property="og:image:width" content="500" />
+        <meta property="og:image:height" content="500" />
 
-<body class="body-wrapper">
-    <!-- preloader -->
-    <div id="preloader" class="preloader">
-        <div class="animation-preloader">
-            <div class="spinner">
+        <!--====== Twitter / Telegram ======-->
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content="MacDetox — Deep Clean for macOS" />
+        <meta name="twitter:description" content="Smart cleanup, full uninstall, and real disk space recovery for macOS 11+." />
+        <meta name="twitter:image" content="https://macdetox.com/preview.jpg" />
+
+        <!--====== Additional SEO ======-->
+        <meta name="robots" content="index, follow" />
+        <meta name="theme-color" content="#0066ff" />
+        <link rel="canonical" href="https://macdetox.com/" />
+
+        <!--====== Cache prevention for Safari ======-->
+        <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+        <meta http-equiv="Pragma" content="no-cache">
+        <meta http-equiv="Expires" content="0">
+
+        <!--====== Icons ======-->
+        <link rel="icon" type="image/png" href="/favicon.png" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="favicon.ico">
+        <!--====== Preload Google Fonts ======-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <!--====== Google Fonts ======-->
+        <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=optional" rel="stylesheet">
+        <!--====== Flaticon css ======-->
+        <link rel="stylesheet" href="../common/fonts/flaticon/flaticon_sasly.css">
+        <!--====== FontAwesome css ======-->
+        <link rel="stylesheet" href="../common/fonts/fontawesome/css/all.min.css">
+        <!--====== Bootstrap css ======-->
+        <link rel="stylesheet" href="../common/css/plugins/bootstrap.min.css">
+        <!--====== Slick-popup css ======-->
+        <link rel="stylesheet" href="../common/css/plugins/slick.css">
+        <!--====== Magnific-popup css ======-->
+        <link rel="stylesheet" href="../common/css/plugins/magnific-popup.css">
+        <!--====== Animate css ======-->
+        <link rel="stylesheet" href="../common/css/plugins/aos.css">
+        <!--====== Default css ======-->
+        <link rel="stylesheet" href="../common/css/default.css">
+        <!--====== Common Style css ======-->
+        <link rel="stylesheet" href="../common/css/common_style.css">
+        <!--====== Style css ======-->
+        <link rel="stylesheet" href="assets/css/style.css?v=20251031-final">
+        <!--====== Safari Performance Optimization ======-->
+        <link rel="stylesheet" href="assets/css/safari-performance.css?v=smooth-final-20251031">
+        <!--====== Header Transparency Fix ======-->
+        <style>
+            /* Предотвращение FOUT (Flash of Unstyled Text) */
+            body {
+                font-display: swap;
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+            }
+
+            /* Принудительная прозрачность header в Safari - ФИНАЛЬНАЯ ВЕРСИЯ */
+            .header-nine:not(.sticky),
+            .header-nine:not(.sticky) .header-navigation,
+            .header-area:not(.sticky) {
+                background-color: transparent !important;
+                background: transparent !important;
+            }
+
+            /* Header поверх hero секции */
+            .header-nine,
+            .header-area {
+                position: relative;
+                z-index: 999 !important;
+                overflow: hidden !important;
+            }
+
+            /* Дополнительная изоляция header */
+            .header-nine .header-navigation {
+                position: relative;
+                z-index: 1000 !important;
+            }
+
+            /* Также убираем фон у вложенных элементов */
+            .header-nine:not(.sticky) .nav-inner-menu,
+            .header-nine:not(.sticky) .primary-menu {
+                background-color: transparent !important;
+                background: transparent !important;
+            }
+
+            /* Темный фон только при sticky */
+            .header-nine.sticky,
+            .header-nine.sticky .header-navigation {
+                background-color: #000308 !important;
+            }
+
+            /* ИСПРАВЛЕНИЕ: Hero section начинается с верха страницы */
+            .hero-ss {
+                margin-top: -100px !important;
+                padding-top: 150px !important;
+            }
+
+            /* smooth-wrapper начинается с верха */
+            #smooth-wrapper,
+            #smooth-content,
+            main {
+                margin-top: 0 !important;
+                padding-top: 0 !important;
+            }
+
+            /* Плавные hover transitions для Safari */
+            a, button,
+            .theme-btn,
+            .read-more,
+            .icon-btn,
+            .sasly-iconic-box,
+            .ss-iconic-box,
+            .sasly-info-box,
+            .blog-post-item,
+            .sasly-card-item,
+            .sasly-project-item,
+            .pricing-item,
+            .team-item,
+            .sasly-product-item,
+            .sasly-category-item {
+                transition-duration: 0.5s;
+                -webkit-transition-duration: 0.5s;
+            }
+
+            .sasly-iconic-box .icon,
+            .ss-iconic-box .icon,
+            .sasly-info-box .icon {
+                transition-duration: 0.5s;
+                -webkit-transition-duration: 0.5s;
+            }
+
+            /* Замедление AOS анимаций появления контента */
+            [data-aos] {
+                transition-duration: 1.5s !important;
+                -webkit-transition-duration: 1.5s !important;
+            }
+
+            [data-aos].aos-animate {
+                transition-duration: 1.5s !important;
+                -webkit-transition-duration: 1.5s !important;
+            }
+
+            /* Оптимизация Bootstrap collapse для аккордеона в Safari */
+            .ss-faq .accordion-collapse {
+                transition: none !important;
+            }
+
+            .ss-faq .accordion-collapse.collapsing {
+                transition: height 0.2s ease !important;
+            }
+
+            /* Фиксированная высота для слайдера отзывов - предотвращает "прыжки" */
+            .testimonial-slider .ss-testimonial-item {
+                min-height: 220px;
+            }
+
+            .testimonial-slider .ss-testimonial-item .testimonial-content {
+                display: flex;
+                flex-direction: column;
+                min-height: 220px;
+            }
+
+            .testimonial-slider .ss-testimonial-item .testimonial-content p {
+                flex: 1;
+            }
+
+            /* Выравнивание текста в pricing секции */
+            .ss-pricing-item .pricing-head {
+                text-align: left !important;
+            }
+
+            .ss-pricing-item .pricing-head .plan {
+                text-align: left !important;
+                display: block !important;
+            }
+
+            .ss-pricing-item .pricing-head p {
+                text-align: left !important;
+            }
+
+            .ss-pricing-item .pricing-head .price {
+                text-align: left !important;
+            }
+
+
+            @media screen and (max-width: 991px) {
+                .ss-pricing-item .pricing-body {
+                    padding: 0 15px !important;
+                }
+            }
+
+            .ss-pricing-item .pricing-button {
+                text-align: left !important;
+            }
+
+            /* Видео в footer CTA только для десктопа */
+            @media screen and (max-width: 1199px) {
+                .footer-cta .col-xl-5 {
+                    display: none;
+                }
+            }
+
+            /* Кнопка возврата вверх поверх всех элементов */
+            .back-to-top {
+                position: fixed !important;
+                right: 30px !important;
+                bottom: 30px !important;
+                z-index: 9999 !important;
+                width: 45px !important;
+                height: 45px !important;
+                background: #0066ff !important;
+                color: #fff !important;
+                text-align: center !important;
+                line-height: 45px !important;
+                border-radius: 50% !important;
+                display: inline-block !important;
+                opacity: 0 !important;
+                visibility: hidden !important;
+                transition: opacity 0.3s ease, visibility 0.3s ease !important;
+                pointer-events: none !important;
+            }
+
+            .back-to-top.show {
+                opacity: 1 !important;
+                visibility: visible !important;
+                pointer-events: auto !important;
+            }
+
+            .back-to-top:hover {
+                background: #0052cc !important;
+            }
+
+            /* Синее свечение вокруг hero изображения */
+            .hero-image-box img {
+                border-radius: 20px;
+                box-shadow: 0 0 40px rgba(0, 102, 255, 0.6),
+                            0 0 80px rgba(0, 102, 255, 0.4),
+                            0 0 120px rgba(0, 102, 255, 0.2);
+            }
+
+        </style>
+        <!-- Замедление AOS через JavaScript -->
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                // Определяем Safari
+                const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+                // Определяем Chrome
+                const isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
+
+                // Отключаем AOS для тяжелых секций ТОЛЬКО в Safari
+                if (isSafari) {
+                    const heavySections = document.querySelectorAll('.ss-pricing-sec [data-aos], .ss-footer [data-aos]');
+                    heavySections.forEach(function(item) {
+                        item.removeAttribute('data-aos');
+                        item.removeAttribute('data-aos-duration');
+                        // Показываем сразу без анимации - никаких лагов в Safari
+                        item.style.opacity = '1';
+                        item.style.transform = 'none';
+                    });
+
+                    // Убираем анимацию открытия/закрытия аккордеона в Safari
+                    const accordionStyle = document.createElement('style');
+                    accordionStyle.textContent = `
+                        .ss-faq .accordion-collapse,
+                        .ss-faq .accordion-collapse.collapsing {
+                            transition: none !important;
+                        }
+                    `;
+                    document.head.appendChild(accordionStyle);
+                }
+
+                // Фикс для Chrome: опускаем hero контент ниже
+                if (isChrome) {
+                    const style = document.createElement('style');
+                    style.textContent = `
+                        .hero-ss .hero-content {
+                            padding-top: 50px !important;
+                        }
+                    `;
+                    document.head.appendChild(style);
+                }
+
+                // Инициализируем AOS для остальных элементов
+                if (typeof AOS !== 'undefined') {
+                    AOS.init({
+                        duration: 1500,  // 1.5 секунды
+                        once: true,      // Анимация только один раз - убирает лаги при скролле вверх
+                        disable: false
+                    });
+                }
+            });
+        </script>
+    </head>
+    <body class="saas-website">
+        <!--====== Preloader УДАЛЕН для тестирования ======-->
+        <!--====== Start Overlay ======-->
+        <div class="offcanvas__overlay"></div>
+        <!--===  Header Area  ===-->
+        <header class="header-area header-nine">
+            <!--====  Header Navigation  ===-->
+            <div class="header-navigation">
+                <div class="container">
+                    <!--====  Header Nav Inner  ===-->
+                    <div class="nav-inner-menu">
+                        <!--====  Primary Menu  ===-->
+                        <div class="primary-menu">
+                            <!--====  Site Branding  ===-->
+                            <div class="site-branding">
+                                <a href="index.html" class="brand-logo" style="text-decoration: none; display: flex; align-items: center; gap: 10px;">
+                                    <img src="assets/images/logo/MD.png" alt="MacDetox" style="height: 40px; width: 40px; border-radius: 10px;">
+                                    <h2 style="color: #fff; font-size: 24px; margin: 0; font-weight: 600;">MacDetox</h2>
+                                </a>
+                            </div>
+                            <!--=== Header Nav Right ===-->
+                            <div class="nav-right-item">
+                                <div class="nav-button">
+                                    <a href="MacDetox.dmg" download class="theme-btn style-one">Download Now<i class="far fa-download"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="txt-loading">
-                <span data-text-preloader="M" class="letters-loading">M</span>
-                <span data-text-preloader="a" class="letters-loading">a</span>
-                <span data-text-preloader="c" class="letters-loading">c</span>
-                <span data-text-preloader="D" class="letters-loading">D</span>
-                <span data-text-preloader="e" class="letters-loading">e</span>
-                <span data-text-preloader="t" class="letters-loading">t</span>
-                <span data-text-preloader="o" class="letters-loading">o</span>
-                <span data-text-preloader="x" class="letters-loading">x</span>
+        </header><!--====== End Header Area ======-->
+        <!--======  Smooth Wrapper  ======-->
+        <div id="smooth-wrapper">
+            <div id="smooth-content">
+                <!--======  Main  ======-->
+                <main>
+<!--=== Start Hero Section ===-->
+<section class="hero-ss bg_cover" style="background-image: url(assets/images/hero/hero-bg.jpg);">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="hero-content text-center">
+                    <span class="sub-title" data-aos="fade-up" data-aos-duration="800" data-aos-delay="0">Clean Your Mac in Seconds</span>
+                    <h1 class="text-anm" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">Your Mac is drowning in hidden junk</h1>
+                    <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">Right now, invisible files are wasting up to 118+ GB on your Mac. Caches, logs, incomplete downloads, and leftover app files you can't see in Finder. MacDetox finds and removes them in seconds.</p>
+                    <div data-aos="fade-up" data-aos-duration="1200" data-aos-delay="300" style="margin-top: 30px;">
+                        <a href="MacDetox.dmg" download class="theme-btn style-one" style="font-size: 22px; padding: 22px 60px;">Download for Mac<i class="far fa-download"></i></a>
+                        <p style="margin-top: 15px; font-size: 14px; opacity: 0.8;">macOS 11.0 or later • Free trial available</p>
+                    </div>
+                </div>
             </div>
-            <p class="text-center">Loading</p>
         </div>
-        <div class="loader">
-            <div class="row">
-                <div class="col-3 loader-section section-left">
-                    <div class="bg"></div>
-                </div>
-                <div class="col-3 loader-section section-left">
-                    <div class="bg"></div>
-                </div>
-                <div class="col-3 loader-section section-right">
-                    <div class="bg"></div>
-                </div>
-                <div class="col-3 loader-section section-right">
-                    <div class="bg"></div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="hero-image-box text-center" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400">
+                    <img src="assets/images/hero/screenshot.png" alt="MacDetox App Screenshot">
                 </div>
             </div>
         </div>
     </div>
-
-    <header class="header-1">
-        <div class="container">
-            <div class="row align-items-center justify-content-between">
-                <div class="col-lg-2 col-sm-5 col-md-4 col-6">
-                    <div class="logo">
-                        <a href="index.html">
-                            <h2 style="color: #fff; font-size: 24px; margin: 0;">💻 MacDetox</h2>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-10 text-end p-lg-0 d-none d-lg-flex justify-content-end align-items-center">
-                    <div class="header-right-element text-white">
-                        <a href="MacDetox.dmg" download class="theme-btn black">Download Now</a>
-                    </div>
-                </div>
-                <div class="d-block d-lg-none col-sm-1 col-md-8 col-6">
-                    <div class="mobile-nav-wrap">
-                        <div id="hamburger"><i class="fal fa-bars"></i></div>
-                        <!-- mobile menu - responsive menu  -->
-                        <div class="mobile-nav">
-                            <button type="button" class="close-nav">
-                                <i class="fal fa-times-circle"></i>
-                            </button>
-                            <nav class="sidebar-nav">
-                                <ul class="metismenu" id="mobile-menu">
-                                    <li><a href="#download">Download</a></li>
-                                </ul>
-                                <a href="MacDetox.dmg" download class="theme-btn d-block mt-4 text-center ms-0">Download Now</a>
-                            </nav>
-                        </div>
-                    </div>
-                    <div class="overlay"></div>
+</section><!--=== End Hero Section ===-->
+<!--=== Start features Section ===-->
+<section class="ss-features pt-40 pb-100">
+    <div class="blur-shape"><span></span></div>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-xl-7">
+                <!--=== Section Title ===-->
+                <div class="section-title text-center mb-50">
+                    <span class="sub-title" data-aos="fade-down" data-aos-delay="20" data-aos-duration="1200">// Features</span>
+                    <h2 class="text-anm">Why MacDetox works better than built-in macOS cleanup</h2>
+                    <p data-aos="fade-up" data-aos-delay="20" data-aos-duration="1300">Unlock a cleaner, faster Mac with smart tools built to remove hidden junk, reclaim real storage, and keep your system running at peak performance — effortlessly.</p>
                 </div>
             </div>
         </div>
-    </header>
-
-    <section class="hero-welcome-wrapper hero-1">
-        <div id="hero-bg" class="hero-background"></div>
-            <div class="single-slide text-white">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xl-7 col-12 col-lg-10 offset-lg-1 offset-xl-0">
-                            <div class="hero-contents">
-                                <h1>Your Mac is drowning in hidden junk</h1>
-                                <p>Right now, invisible files are wasting up to 118+ GB on your Mac. Caches, logs, incomplete downloads, and leftover app files you can't see in Finder. MacDetox finds and removes them in seconds.</p>
-                                <a href="MacDetox.dmg" download class="theme-btn" style="display: inline-block; margin-top: 20px; background: linear-gradient(135deg, #10b981 0%, #059669 100%); color: white; font-size: 20px; padding: 20px 50px; border-radius: 50px; font-weight: 600; box-shadow: 0 10px 30px rgba(16, 185, 129, 0.4); transition: all 0.3s ease;">Download for Mac</a>
+        <div class="row">
+            <div class="col-lg-6">
+                <!--=== Iconic Box ===-->
+                <div class="ss-iconic-box mb-30" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="icon">
+                        <i class="flaticon-analytics"></i>
+                    </div>
+                    <div class="content">
+                        <h5>Deep System Scan</h5>
+                        <p>Your Mac is full of invisible junk. MacDetox finds it — and removes it.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <!-- Iconic Box -->
+                <div class="ss-iconic-box mb-30" data-aos="fade-up" data-aos-duration="1200">
+                    <div class="icon">
+                        <i class="flaticon-setting"></i>
+                    </div>
+                    <div class="content">
+                        <h5>Smart Auto-Cleanup</h5>
+                        <p>No risk, no manual sorting. Clean safely with one click.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <!--=== Iconic Box ===-->
+                <div class="ss-iconic-box mb-30" data-aos="fade-up" data-aos-duration="1400">
+                    <div class="icon">
+                        <i class="flaticon-checked"></i>
+                    </div>
+                    <div class="content">
+                        <h5>Full App Uninstall</h5>
+                        <p>Uninstall apps completely. No leftovers, no daemons, no trash.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <!--=== Iconic Box ===-->
+                <div class="ss-iconic-box mb-30" data-aos="fade-up" data-aos-duration="1600">
+                    <div class="icon">
+                        <i class="flaticon-bar-chart"></i>
+                    </div>
+                    <div class="content">
+                        <h5>Free Real Storage</h5>
+                        <p>Get back real disk space — not "optimized memory", but gigabytes.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section><!--=== End features Section ===-->
+<!--====== Start Features Section ======-->
+<section class="ss-features-two pt-120">
+    <div class="container">
+        <div class="row align-items-center mb-5 justify-content-center">
+            <div class="col-xl-6 col-lg-8 col-md-10">
+                <!-- Content Box -->
+                <div class="sasly-content-box mb-55">
+                    <div class="section-title mb-30">
+                        <h2 class="text-anm">Why MacDetox Beats Other Mac Cleaners</h2>
+                        <p data-aos="fade-up" data-aos-duration="1000">Built by Mac power-users — designed to clean what others ignore.</p>
+                    </div>
+                    <div class="ss-features-list">
+                        <div class="ss-icon-content-box mb-25" data-aos="fade-up" data-aos-duration="1200">
+                            <div class="content">
+                                <h4><i class="fas fa-check-circle"></i>Built for Real Mac Cleanup — Not Just Cache Clearing</h4>
+                                <p>Most “cleaners” only wipe browser cache and temporary files.
+                                   MacDetox digs into System logs, crash reports, hidden app folders, leftover support files, and orphaned daemons — the stuff that really eats disk space.
+                                </p>
                             </div>
                         </div>
-                        <div class="col-xl-5 col-12 text-xl-end col-lg-10 offset-lg-1 offset-xl-0">
-                            <div class="hero-mobile mt-5 mt-xl-0">
-                                <img class="glow-effect" src="assets/img/screenshot.png" alt="MacDetox App Screenshot">
+                        <div class="ss-icon-content-box mb-25" data-aos="fade-up" data-aos-duration="1400">
+                            <div class="content">
+                                <h4><i class="fas fa-check-circle"></i>Full App Uninstall — With Daemons, Agents, and Residual Files</h4>
+                                <p>Drag-to-trash ≠ uninstall.
+                                   MacDetox removes launch agents, login items, auto-start daemons, cache folders, plugins, and Library leftovers — automatically.
+                                </p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        
-    </section>
-
-    <section class="our-best-features-wrapper section-padding">
-        <div class="container">
-            <div class="col-xl-8 offset-xl-2 text-center">
-                <div class="block-contents">
-                    <div class="section-title">
-                        <h2>Three problems destroying your Mac's performance</h2>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-4 col-md-6 col-12">
-                    <div class="features-card-item style-1">
-                      <div id="icon-trash" class="icon icon1"></div> 
-                        <h3>Invisible junk filling your disk</h3>
-                        <p>Caches, logs, and temp files pile up daily. You can't see them in Finder, but they're wasting gigabytes. Apps never clean up after themselves.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-12">
-                    <div class="features-card-item style-1">
-                    <div id="icon-search" class="icon icon2"></div>
-                        <h3>Apps leave traces everywhere</h3>
-                        <p>Deleting an app doesn't remove it completely. Leftover files, preferences, and data stay hidden across your system, wasting space forever.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-12">
-                    <div class="features-card-item style-1">
-                        <div id="icon-chart" class="icon icon3"></div>
-                        <h3>You don't know what's eating your space</h3>
-                        <p>Disk space vanishes and you have no idea where. Large folders hide in obscure locations. You need to see exactly what's taking up room.</p>
-                    </div>
+            <div class="col-xl-6 col-lg-8 col-md-10">
+                <!-- Image Box -->
+                <div class="sasly-image-box text-center text-xl-end mb-55" data-aos="fade-up" data-aos-duration="1000">
+                    <img src="assets/images/features/3d0eac6c-198c-4fc0-b8c0-8ab4acf66886.png" alt="features image">
+                    <div class="blur-shape"><span></span></div>
                 </div>
             </div>
         </div>
-    </section>
-
-    <section class="content-block section-padding section-bg">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-xl-5 pe-lg-0 col-lg-5 col-12">
-                    <div class="block-img wow fadeInLeft" data-wow-duration="1.1s">
-                        <div id="sparkles" style="width:150px;height:150px;"></div>
-                    </div>
-                </div>
-                <div class="col-xl-6 col-lg-7 offset-xl-1 col-12 ps-lg-5 pe-xl-5">
-                    <div class="block-contents ms-xl-3 mt-5 mt-lg-0">
-                        <div class="section-title wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s">
-                            <h2>Clean: Remove invisible junk</h2>
-                        </div>
-                        <p class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">Safari caches eating 18.4 GB. Spotify storing 12.7 GB of temp files. Xcode hoarding 35.2 GB. macOS system junk piling up to 28.9 GB.</p>
-                        <p class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">MacDetox finds all the hidden junk apps leave behind and removes it safely. Reclaim gigabytes in seconds without touching your important files.</p>
-                    </div>
+        <div class="row reverse-wrap align-items-center pt-2 mt-5 justify-content-center">
+            <div class="col-xl-6 col-lg-8 col-md-10">
+                <!-- Image Box -->
+                <div class="sasly-image-box mb-50 text-center text-xl-start" data-aos="fade-up" data-aos-duration="1000">
+                    <img src="assets/images/features/a0e33a4f-d40f-4a85-b285-91822e14d398.png" alt="features image">
+                    <div class="blur-shape"><span></span></div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <section class="content-block section-padding">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-xl-6 col-lg-7 col-12 order-2 order-lg-1">
-                    <div class="block-contents me-xl-3 mt-5 mt-lg-0">
-                        <div class="section-title wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s">
-                            <h2>Uninstall: Delete apps completely</h2>
-                        </div>
-                        <p class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">Dragging an app to the trash doesn't actually remove it. Preferences, caches, support files, and data stay scattered across your system.</p>
-                        <p class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">MacDetox finds every trace of an app and removes it all at once. No leftover files wasting space. Clean uninstall every time.</p>
-                    </div>
-                </div>
-                <div class="col-xl-5 col-lg-5 offset-xl-1 col-12 order-1 order-lg-2">
-                    <div class="block-img wow fadeInRight" data-wow-duration="1.1s">
-                        <div style="font-size: 150px; line-height: 1;">🗑️</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="content-block section-padding section-bg">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-xl-5 pe-lg-0 col-lg-5 col-12">
-                    <div class="block-img wow fadeInLeft" data-wow-duration="1.1s">
-                        <div id="chart-anim" style="width:450px;height:450px;margin:0 auto;"></div>
-                    </div>
-                </div>
-                <div class="col-xl-6 col-lg-7 offset-xl-1 col-12 ps-lg-5 pe-xl-5">
-                    <div class="block-contents ms-xl-3 mt-5 mt-lg-0">
-                        <div class="section-title wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s">
-                            <h2>Analyze: See what's eating your space</h2>
-                        </div>
-                        <p class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">Your disk is full but you don't know why. Files are scattered everywhere. You need to see the big picture.</p>
-                        <p class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">MacDetox shows you exactly what's taking up space. Visual charts reveal the largest folders and files. Find space hogs instantly.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="content-block fix faq-wrapper section-padding section-bg">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6 col-xl-5 mt-5 mt-lg-0">
-                    <div class="block-contents">
-                        <div class="section-title wow fadeInUp" data-wow-duration="1s">
-                            <h2>How it works</h2>
-                        </div>
-                    </div>
-                    <div class="step-accordion">
-                        <div class="accordion" id="accordion">
-
-                            <div class="accordion-item wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
-                              <h4 class="accordion-header" style="margin-bottom: 40px">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="false" aria-controls="faq1">
-                                    Download and install MacDetox
-                                </button>
-                              </h4>
-                              <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#accordion">
-                                <div class="accordion-body">
-                                    Free download for macOS. Installs in seconds. Works on all modern Macs.
-                                </div>
-                              </div>
+            <div class="col-xl-6 col-lg-8 col-md-10">
+                <!-- Content Box -->
+                <div class="sasly-content-box mb-50">
+                    <div class="ss-features-list">
+                        <div class="ss-icon-content-box mb-25" data-aos="fade-up" data-aos-duration="1200">
+                            <div class="content">
+                                <h4><i class="fas fa-check-circle"></i>Privacy-First. No Cloud Scanning. No Data Uploads</h4>
+                                <p>Unlike CleanMyMac or CCleaner, MacDetox runs 100% locally.
+                                   No analytics, no tracking, no file analysis on remote servers. Your Mac stays your Mac.
+                                </p>
                             </div>
-
-                            <div class="accordion-item wow fadeInUp" data-wow-duration="1.1s" data-wow-delay=".6s">
-                              <h4 class="accordion-header"  style="margin-bottom: 40px">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="true" aria-controls="faq2">
-                                    Scan your Mac for junk
-                                </button>
-                              </h4>
-                              <div id="faq2" class="accordion-collapse collapse show" data-bs-parent="#accordion">
-                                <div class="accordion-body">
-                                    One click to scan. MacDetox finds all the hidden junk, leftover files, and space wasters on your system.
-                                </div>
-                              </div>
+                        </div>
+                        <div class="ss-icon-content-box mb-25" data-aos="fade-up" data-aos-duration="1400">
+                            <div class="content">
+                                <h4><i class="fas fa-check-circle"></i>Optimized for Apple Silicon (M1/M2/M3) — 10x Faster Scans</h4>
+                                <p>Many tools still run under Rosetta.
+                                   MacDetox is natively compiled for ARM chips, meaning faster scan time, lower CPU load, and less battery drain.
+                                </p>
                             </div>
-
-                            <div class="accordion-item wow fadeInUp" data-wow-duration="1.1s" data-wow-delay=".9s">
-                              <h4 class="accordion-header">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">
-                                    Clean and reclaim space
-                                </button>
-                              </h4>
-                              <div id="faq3" class="accordion-collapse collapse show" data-bs-parent="#accordion">
-                                <div class="accordion-body">
-                                    Review what was found, then clean it all with one click. Watch gigabytes of space come back instantly.
-                                </div>
-                              </div>
-                            </div>
-
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6 col-xl-6 offset-xl-1 pe-xl-3 col-12">
-                    <div class="block-img ms-xl-5 wow fadeInRight" data-wow-duration="1.2s" data-wow-delay=".3s">
-                        <div id="lightning-anim" style="width:200px;height:200px;margin:auto;"></div>
+            </div>
+        </div>
+    </div>
+</section><!--====== End Features Section ======-->
+<!--====== Start How it works Section ======-->
+<section class="ss-key-features pt-65">
+    <div class="container">
+        <!-- How it works Wrapper -->
+        <div class="key-features-wrapper">
+            <div class="blur-shape"><span></span></div>
+            <div class="row justify-content-center">
+                <div class="col-xl-7 col-lg-10">
+                    <!--=== Section title ===-->
+                    <div class="section-title text-center mb-50">
+                        <span class="sub-title" data-aos="fade-up" data-aos-duration="1000">// Built for speed. Designed to clean.</span>
+                        <h2 class="text-anm">How it works </h2>
+                        <p data-aos="fade-up" data-aos-duration="1200">Smart cleanup. Real storage back. Zero effort.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <!--=== Key Features Box ===-->
+                    <div class="ss-key-features-box mb-40" data-aos="fade-up" data-aos-duration="1000">
+                        <div class="icon">
+                            <i class="flaticon-import"></i>
+                        </div>
+                        <div class="content">
+                            <h4>Download MacDetox (Free)</h4>
+                            <p>Install in seconds</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <!--=== Key Features Box ===-->
+                    <div class="ss-key-features-box mb-40" data-aos="fade-up" data-aos-duration="1200">
+                        <div class="icon">
+                            <i class="flaticon-analytics"></i>
+                        </div>
+                        <div class="content">
+                            <h4>Find hidden junk automatically</h4>
+                            <p>MacDetox scans deep — app leftovers, caches, logs, cloud sync junk, Xcode trash, system clutter & more</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <!--=== Key Features Box ===-->
+                    <div class="ss-key-features-box mb-40" data-aos="fade-up" data-aos-duration="1400">
+                        <div class="icon">
+                            <i class="flaticon-checked"></i>
+                        </div>
+                        <div class="content">
+                            <h4>Clean it all safely with one click</h4>
+                            <p>No manual sorting. No "review items" nonsense. Just reclaim real storage instantly</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
-
-    <section id="reviews" class="content-block section-padding section-bg">
-        <div class="container">
-            <div class="row justify-content-center text-center">
-            <div class="col-lg-8 wow fadeInUp" data-wow-delay="0.1s">
-                <h2>What users say about MacDetox</h2>
-                <p class="lead">
-                Real feedback from real Mac users who cleaned up gigabytes in seconds.
-                </p>
-            </div>
-            </div>
-
-            <div class="row mt-5">
-            <div class="col-md-4 wow fadeInUp" data-wow-delay="0.2s">
-                <div class="review-card">
-                <p class="review-text">
-                    “This app found 95 GB of junk I didn’t even know existed. My Mac feels brand new!!”
-                </p>
-                <p class="review-author">
-                    Drew P., Software Engineer
-                </p>
-                </div>
-            </div>
-
-            <div class="col-md-4 wow fadeInUp" data-wow-delay="0.4s">
-                <div class="review-card">
-                <p class="review-text">
-                    “Finally something that actually cleans everything but not just cache. Game Changer.”
-                </p>
-                <p class="review-author">
-                    Emma L., Product Manager
-                </p>
-                </div>
-            </div>
-
-            <div class="col-md-4 wow fadeInUp" data-wow-delay="0.6s">
-                <div class="review-card">
-                <p class="review-text">
-                    “Simple, fast and efficient. 10/10. Better than most paid cleaners I tried.”
-                </p>
-                <p class="review-author">
-                    Chris P., Data Scientist
-                </p>
-                </div>
-            </div>
-            </div>
-        </div>
+    </div>
 </section>
-
-    <section id="download" class="cta-banner-wrapper style-1 section-padding">
-        <div class="container">
-            <div class="cta-banner text-white">
-                <div class="row">
-                    <div class="col-xxl-8 offset-xxl-2 text-center">
-                        <div class="cta-contents">
-                            <h2 class="wow fadeInUp">Stop wasting space. Start using MacDetox.</h2>
-                            <p class="wow fadeInUp" data-wow-delay=".3s">Join 10,000+ Mac users who've reclaimed gigabytes of wasted space. Clean your Mac in seconds.</p>
-                            <a href="MacDetox.dmg" download class="theme-btn wow fadeInUp" data-wow-delay=".6s" style="font-size: 22px; padding: 22px 60px; margin-top: 20px; display: inline-block; background: linear-gradient(135deg, #10b981 0%, #059669 100%); color: white; border-radius: 50px; font-weight: 600; box-shadow: 0 15px 40px rgba(16, 185, 129, 0.5); transition: all 0.3s ease;">Download for Mac</a>
-                            <p class="wow fadeInUp" data-wow-delay=".8s" style="margin-top: 20px; font-size: 14px; opacity: 0.8;">macOS 11.0 or later • Free trial available</p>
+<!--====== Start Reviews Section ======-->
+<section class="ss-testimonial-sec pt-60 pb-100">
+    <div class="blur-shape"><span></span></div>
+    <div class="container">
+        <div class="row align-items-center justify-content-center">
+            <div class="col-xl-7 col-lg-10">
+                <!-- Content Box -->
+                <div class="ss-content-box mb-30">
+                    <div class="section-title mb-55">
+                        <span class="sub-title" data-aos="fade-up" data-aos-duration="1000">// Real Mac Cleaning</span>
+                        <h2 class="text-anm">Real Users. Real Results</h2>
+                        <p>No marketing claims—just honest results from people who tried MacDetox on their own Macs.</p>
+                    </div>
+                    <div class="ss-image-box" data-aos="fade-up" data-aos-duration="1200" style="position: relative; width: 100%; padding-bottom: 56.25%; overflow: hidden; border-radius: 15px;">
+                        <video src="assets/images/testimonial/IMG_5596.MOV" autoplay loop muted playsinline style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; border-radius: 15px;"></video>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-5 col-lg-10">
+                <!-- Slider -->
+                <div class="testimonial-slider">
+                    <!-- Item -->
+                    <div class="ss-testimonial-item mb-30">
+                        <div class="testimonial-content">
+                            <p>Freed 56GB in one scan — mostly Xcode leftovers I didn't even know existed. The fact that it shows exactly what will be deleted makes it feel safe. Instantly became part of my dev workflow.</p>
+                            <div class="author-rating-wrap">
+                                <div class="author-thumb-item">
+                                    <div class="author-thumb">
+                                        <img src="assets/images/testimonial/author1.jpg" alt="author thumb">
+                                    </div>
+                                    <div class="author-info">
+                                        <h5>Ethan Clarke</h5>
+                                        <span class="position">iOS developer</span>
+                                    </div>
+                                </div>
+                                <div class="author-ratings">
+                                    <span><i class="fas fa-star"></i>4.9 - Excellent</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Item -->
+                    <div class="ss-testimonial-item mb-30">
+                        <div class="testimonial-content">
+                            <p>I tried to uninstall Figma manually — turns out it left 2.4GB of junk behind. MacDetox removed the app, fonts, caches, and helper daemons in a single click. That alone was worth it.”</p>
+                            <div class="author-rating-wrap">
+                                <div class="author-thumb-item">
+                                    <div class="author-thumb">
+                                        <img src="assets/images/testimonial/author2.jpg" alt="author thumb">
+                                    </div>
+                                    <div class="author-info">
+                                        <h5>Mia Jensen</h5>
+                                        <span class="position">Product Designer</span>
+                                    </div>
+                                </div>
+                                <div class="author-ratings">
+                                    <span><i class="fas fa-star"></i>5 - Excellent</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Item -->
+                    <div class="ss-testimonial-item mb-30">
+                        <div class="testimonial-content">
+                            <p>My MacBook went from 6GB free to 42GB free in under 2 minutes. I was literally about to upgrade SSD storage before trying this. Saved me $199 and a headache.</p>
+                            <div class="author-rating-wrap">
+                                <div class="author-thumb-item">
+                                    <div class="author-thumb">
+                                        <img src="assets/images/testimonial/author3.jpg" alt="author thumb">
+                                    </div>
+                                    <div class="author-info">
+                                        <h5>David Chen</h5>
+                                        <span class="position">Startup founder</span>
+                                    </div>
+                                </div>
+                                <div class="author-ratings">
+                                    <span><i class="fas fa-star"></i>4.9 - Excellent</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Item -->
+                    <div class="ss-testimonial-item mb-30">
+                        <div class="testimonial-content">
+                            <p>Adobe apps leave trash everywhere. MacDetox wiped old Premiere caches and hidden media folders I didn't even see in Finder. My exports run faster now. Didn't think cleaning would affect performance — but it did.</p>
+                            <div class="author-rating-wrap">
+                                <div class="author-thumb-item">
+                                    <div class="author-thumb">
+                                        <img src="assets/images/testimonial/author2.jpg" alt="author thumb">
+                                    </div>
+                                    <div class="author-info">
+                                        <h5>Sofia Ramirez</h5>
+                                        <span class="position">Video editor</span>
+                                    </div>
+                                </div>
+                                <div class="author-ratings">
+                                    <span><i class="fas fa-star"></i>5 - Excellent</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section><!--====== End Reviews Section ======-->
+<!--====== Start pricing Section ======-->
+<section class="ss-pricing-sec pt-120 pb-100">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-12">
+                <!-- Section Title -->
+                <div class="section-title text-center mb-60">
+                    <span class="sub-title" data-aos="fade-down" data-aos-duration="1000">// Pricing</span>
+                    <h2 class="text-anm">Choose Your Plan</h2>
+                    <p data-aos="fade-up" data-aos-duration="1000">No hidden fees. Cancel anytime.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <!-- Pricing Item -->
+                <div class="ss-pricing-item mb-30" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="pricing-head">
+                        <span class="plan">One-Time Clean</span>
+                        <p>Perfect for a quick cleanup</p>
+                        <h2 class="price">$4.99</h2>
+                    </div>
+                    <div class="pricing-body">
+                        <ul class="check-list style-one">
+                            <li><i class="fas fa-check-circle"></i>Single clean session</li>
+                            <li><i class="fas fa-check-circle"></i>All cleaning features</li>
+                            <li><i class="fas fa-check-circle"></i>No subscription required</li>
+                        </ul>
+                    </div>
+                    <div class="pricing-button">
+                        <a href="#" class="theme-btn style-one">Buy Now</a>
+                    </div>
+                </div>
+                <!-- Pricing Item -->
+                <div class="ss-pricing-item mb-30" data-aos="fade-up" data-aos-duration="1200">
+                    <div class="pricing-head">
+                        <span class="plan">Weekly Pro</span>
+                        <p>Stay clean every week</p>
+                        <h2 class="price">$2.99 <span class="duration">/week</span></h2>
+                    </div>
+                    <div class="pricing-body">
+                        <ul class="check-list style-one">
+                            <li><i class="fas fa-check-circle"></i>Unlimited cleaning</li>
+                            <li><i class="fas fa-check-circle"></i>All features unlocked</li>
+                            <li><i class="fas fa-check-circle"></i>Priority support</li>
+                            <li><i class="fas fa-check-circle"></i>Regular updates</li>
+                        </ul>
+                    </div>
+                    <div class="pricing-button">
+                        <a href="#" class="theme-btn style-one">Subscribe</a>
+                    </div>
+                </div>
+                <!-- Pricing Item -->
+                <div class="ss-pricing-item pricing-active mb-30" data-aos="fade-up" data-aos-duration="1400">
+                    <div class="blur-shape"><span></span></div>
+                    <div class="pricing-head">
+                        <span class="plan">Monthly Pro <span style="background: #4ade80; color: #000; padding: 4px 12px; border-radius: 20px; font-size: 12px; margin-left: 10px;">Most Popular</span></span>
+                        <p>Best value for regular users</p>
+                        <h2 class="price">$9.99 <span class="duration">/month</span></h2>
+                    </div>
+                    <div class="pricing-body">
+                        <ul class="check-list style-one">
+                            <li><i class="fas fa-check-circle"></i>Unlimited cleaning</li>
+                            <li><i class="fas fa-check-circle"></i>All features unlocked</li>
+                            <li><i class="fas fa-check-circle"></i>Priority support</li>
+                            <li><i class="fas fa-check-circle"></i>Regular updates</li>
+                        </ul>
+                    </div>
+                    <div class="pricing-button">
+                        <a href="#" class="theme-btn style-one">Subscribe</a>
+                    </div>
+                </div>
+                <!-- Pricing Item -->
+                <div class="ss-pricing-item mb-30" data-aos="fade-up" data-aos-duration="1600">
+                    <div class="pricing-head">
+                        <span class="plan">Annual Pro <span style="background: #fb923c; color: #000; padding: 4px 12px; border-radius: 20px; font-size: 12px; margin-left: 10px;">Save 17%</span></span>
+                        <p>Maximum savings for power users</p>
+                        <h2 class="price">$99.99 <span class="duration">/year</span></h2>
+                    </div>
+                    <div class="pricing-body">
+                        <ul class="check-list style-one">
+                            <li><i class="fas fa-check-circle"></i>Unlimited cleaning</li>
+                            <li><i class="fas fa-check-circle"></i>All features unlocked</li>
+                            <li><i class="fas fa-check-circle"></i>Priority support</li>
+                            <li><i class="fas fa-check-circle"></i>Regular updates</li>
+                        </ul>
+                    </div>
+                    <div class="pricing-button">
+                        <a href="#" class="theme-btn style-one">Subscribe</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section><!--====== End pricing Section ======-->
+<!--====== Start Faq Section ======-->
+<section class="ss-faq pt-130 pb-80">
+    <div class="blur-shape"><span></span></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-5">
+                <div class="ss-content-box mb-50">
+                    <div class="section-title">
+                        <span class="sub-title" data-aos="fade-down" data-aos-duration="1000">// FAQ</span>
+                        <h2 class="text-anm">Common Questions</h2>
+                    </div>
+                    <p data-aos="fade-up" data-aos-duration="1000">Everything you need to know about MacDetox and how it works.</p>
+                </div>
+            </div>
+            <div class="col-lg-7">
+                <div class="ss-faq-wrapper mb-30">
+                    <!--====== Accordion   ======-->
+                    <div class="accordion" id="accordionOne">
+                        <!--====== Accordion Item  ======-->
+                        <div class="accordion-item mb-10" data-aos="fade-up" data-aos-duration="1000">
+                            <div class="accordion-header">
+                                <h6 class="accordion-title" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="false">
+                                    <span class="sn">01.</span> Why is my Mac still full even after deleting files?
+                                </h6>
+                            </div>
+                            <div id="collapse1" class="accordion-collapse collapse" data-bs-parent="#accordionOne">
+                                <div class="accordion-content">
+                                    <p>Because macOS doesn't remove cached data, app leftovers, logs, Xcode junk, or temporary system files. Those can stack into tens of gigabytes — and Finder doesn't show them.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!--====== Accordion Item  ======-->
+                        <div class="accordion-item mb-10" data-aos="fade-up" data-aos-duration="1200">
+                            <div class="accordion-header">
+                                <h6 class="accordion-title" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false">
+                                    <span class="sn">02.</span> How is MacDetox different from the built-in macOS storage cleanup?
+                                </h6>
+                            </div>
+                            <div id="collapse2" class="accordion-collapse collapse" data-bs-parent="#accordionOne">
+                                <div class="accordion-content">
+                                    <p>macOS only clears a small portion of temporary files. MacDetox scans deep developer caches, browser junk, app leftovers, GPU logs, Homebrew trash, and more — the things Apple never touches.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!--====== Accordion Item  ======-->
+                        <div class="accordion-item mb-10" data-aos="fade-up" data-aos-duration="1400">
+                            <div class="accordion-header">
+                                <h6 class="accordion-title" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false">
+                                    <span class="sn">03.</span> Can MacDetox remove apps completely with all leftovers?
+                                </h6>
+                            </div>
+                            <div id="collapse3" class="accordion-collapse collapse" data-bs-parent="#accordionOne">
+                                <div class="accordion-content">
+                                    <p>Yes. The Full Uninstall feature removes the app + hidden support files, caches, launch agents, preferences, and daemon processes. No more "uninstalled" apps taking 2GB in ~/Library.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!--====== Accordion Item  ======-->
+                        <div class="accordion-item mb-10" data-aos="fade-up" data-aos-duration="1600">
+                            <div class="accordion-header">
+                                <h6 class="accordion-title" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false">
+                                    <span class="sn">04.</span> Will MacDetox actually make my Mac faster — or just free space?
+                                </h6>
+                            </div>
+                            <div id="collapse4" class="accordion-collapse collapse" data-bs-parent="#accordionOne">
+                                <div class="accordion-content">
+                                    <p>Both. Freeing disk space improves SSD performance, but we also remove background services, launch agents, and bloated caches that slow the system down — especially on older Macs.</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
-
-    <section id="support" class="content-block section-padding section-bg wow fadeInUp" data-wow-delay="0.2s">
-        <div class="container text-center">
-            <h2 class="mb-4">Caring 24/7 Support Team</h2>
-            <p class="mb-4">
-            Our team of professionals is always ready to help. Reach out with any questions about MacDetox — we’ll find a solution!
-            </p>
-            <div id="support-anim" style="width:180px; height:180px; margin:0 auto;"></div>
-            <p class="mt-3">
-            📩 <a href="mailto:support@macdetox.com">sshrigaleev@gmail.com</a>
-            </p>
-        </div>
-    </section>
-
-    <!-- ========== FAQ Section ========== -->
-    <section class="content-block section-padding" style="background-color: #f9fafc;">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 offset-lg-2">
-                    <div class="section-title text-center mb-5">
-                        <h2>Frequently Asked Questions</h2>
-                    </div>
-
-                    <div class="accordion" id="mainFAQ">
-                        <div class="accordion-item" style="background: #fff !important; border-radius: 18px !important; margin-bottom: 20px !important; box-shadow: 0 6px 25px rgba(0, 0, 0, 0.08) !important;">
-                            <h2 class="accordion-header" id="headingOne">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqOne" aria-expanded="false" aria-controls="faqOne" style="background: #e8ebf0 !important; color: #0a0a1a !important; font-weight: 600 !important; font-size: 18px !important; padding: 20px 25px !important; opacity: 1 !important; pointer-events: auto !important;">
-                                    Why do I need MacDetox?
-                                </button>
-                            </h2>
-                            <div id="faqOne" class="accordion-collapse collapse" data-bs-parent="#mainFAQ" aria-labelledby="headingOne">
-                                <div class="accordion-body" style="background: #fff !important; padding: 20px 30px !important; color: #555 !important; opacity: 1 !important;">
-                                    MacDetox helps you clean out junk files, app leftovers, and invisible clutter that slow down your Mac — so it runs like new again.
+    </div>
+</section><!--====== End Faq Section ======-->
+</main>
+                <!--====== Start Footer ======-->
+                <footer class="ss-footer ss-footer-area">
+                    <div class="container">
+                        <!-- Footer CTA -->
+                        <div class="footer-cta bg_cover" style="background-image: url(assets/images/footer/footer-cta-bg.jpg);">
+                            <div class="row">
+                                <div class="col-xl-7 col-lg-10">
+                                    <div class="cta-content-box">
+                                        <h2 class="text-anm">Clean your Mac in seconds.</h2>
+                                        <p data-aos="fade-up" data-aos-duration="1000" style="font-size: 20px; margin-bottom: 20px;">Recover up to 50-128GB instantly.</p>
+                                        <p data-aos="fade-up" data-aos-duration="1300" style="font-size: 14px; opacity: 0.8;">Free account required. Works on macOS 11 and later.</p>
+                                        <div class="sasly-button" data-aos="fade-up" data-aos-duration="1500">
+                                            <a href="MacDetox.dmg" download class="theme-btn style-one">Download Now<i class="far fa-download"></i></a>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
-
-                        <div class="accordion-item" style="background: #fff !important; border-radius: 18px !important; margin-bottom: 20px !important; box-shadow: 0 6px 25px rgba(0, 0, 0, 0.08) !important;">
-                            <h2 class="accordion-header" id="headingTwo">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqTwo" aria-expanded="false" aria-controls="faqTwo" style="background: #e8ebf0 !important; color: #0a0a1a !important; font-weight: 600 !important; font-size: 18px !important; padding: 20px 25px !important; opacity: 1 !important; pointer-events: auto !important;">
-                                    Is MacDetox safe to use?
-                                </button>
-                            </h2>
-                            <div id="faqTwo" class="accordion-collapse collapse" data-bs-parent="#mainFAQ" aria-labelledby="headingTwo">
-                                <div class="accordion-body" style="background: #fff !important; padding: 20px 30px !important; color: #555 !important; opacity: 1 !important;">
-                                    Yes. MacDetox never deletes system files — it only removes safe-to-clean junk, caches, and leftovers from uninstalled apps.
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="accordion-item" style="background: #fff !important; border-radius: 18px !important; margin-bottom: 20px !important; box-shadow: 0 6px 25px rgba(0, 0, 0, 0.08) !important;">
-                            <h2 class="accordion-header" id="headingThree">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqThree" aria-expanded="false" aria-controls="faqThree" style="background: #e8ebf0 !important; color: #0a0a1a !important; font-weight: 600 !important; font-size: 18px !important; padding: 20px 25px !important; opacity: 1 !important; pointer-events: auto !important;">
-                                    Do I have to pay for MacDetox?
-                                </button>
-                            </h2>
-                            <div id="faqThree" class="accordion-collapse collapse" data-bs-parent="#mainFAQ" aria-labelledby="headingThree">
-                                <div class="accordion-body" style="background: #fff !important; padding: 20px 30px !important; color: #555 !important; opacity: 1 !important;">
-                                    Disk analysis is free. Advanced features like deep scans and auto-optimization are available in the Pro version.
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="accordion-item" style="background: #fff !important; border-radius: 18px !important; margin-bottom: 20px !important; box-shadow: 0 6px 25px rgba(0, 0, 0, 0.08) !important;">
-                            <h2 class="accordion-header" id="headingFour">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqFour" aria-expanded="false" aria-controls="faqFour" style="background: #e8ebf0 !important; color: #0a0a1a !important; font-weight: 600 !important; font-size: 18px !important; padding: 20px 25px !important; opacity: 1 !important; pointer-events: auto !important;">
-                                    What versions of macOS does MacDetox support?
-                                </button>
-                            </h2>
-                            <div id="faqFour" class="accordion-collapse collapse" data-bs-parent="#mainFAQ" aria-labelledby="headingFour">
-                                <div class="accordion-body" style="background: #fff !important; padding: 20px 30px !important; color: #555 !important; opacity: 1 !important;">
-                                    The app supports macOS 15 and later versions.
+                                <div class="col-xl-5">
+                                    <div class="cta-image">
+                                        <video src="assets/images/footer/macbook.mp4" autoplay loop muted playsinline style="width: 100%; height: 100%; object-fit: cover; border-radius: 15px;"></video>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                    <div class="footer-wrapper">
+                        <div class="blur-shape"><span></span></div>
+                        <!--=== Footer Widget Area ===-->
+                        <div class="footer-widget-area pt-120 pb-20">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <!--=== Footer Widget ===-->
+                                        <div class="footer-widget footer-newsletter-widget mb-40" data-aos="fade-up" data-aos-duration="1800">
+                                            <div class="footer-content">
+                                                <h4 class="widget-title">Caring 24/7 Support</h4>
+                                                <p>Our team of professionals is always ready to help. Reach out with any questions about MacDetox — we'll find a solution!</p>
+                                                <p style="margin-top: 15px;"><a href="mailto:sshrigaleev@gmail.com" style="color: #fff; text-decoration: underline;">sshrigaleev@gmail.com</a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--=== Footer Copyright ===-->
+                        <div class="footer-copyright">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="copyright-text" style="text-align: center;">
+                                            <p>&copy; <span id="current-year"></span> <span>MacDetox</span> - All rights reserved.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </footer><!--====== End Footer  ======-->
             </div>
         </div>
-    </section>
+        <!--====== Back To Top  ======-->
+        <a href="#" class="back-to-top"><i class="fas fa-angle-up"></i></a>
+        <!--====== Jquery js ======-->
+        <script src="../common/js/plugins/jquery-3.7.1.min.js"></script>
+        <!--====== Bootstrap js ======-->
+        <script src="../common/js/plugins/popper.min.js"></script>
+        <!--====== Bootstrap js ======-->
+        <script src="../common/js/plugins/bootstrap.min.js"></script>
+        <!--====== GSap Js ======-->
+        <script src="../common/js/plugins/gsap/gsap.min.js"></script>
+        <script src="../common/js/plugins/gsap/SplitText.min.js"></script>
+        <script src="../common/js/plugins/gsap/ScrollSmoother.min.js"></script>
+        <script src="../common/js/plugins/gsap/ScrollTrigger.min.js"></script>
+        <!--====== Slick js ======-->
+        <script src="../common/js/plugins/slick.min.js"></script>
+        <!--====== Magnific js ======-->
+        <script src="../common/js/plugins/jquery.magnific-popup.min.js"></script>
+        <!--====== Aos js ======-->
+        <script src="../common/js/plugins/aos.js"></script>
+        <!--====== Common js ======-->
+        <script src="../common/js/common_script.js"></script>
+        <!--====== Main js ======-->
+        <script src="assets/js/theme.js?v=optimized"></script>
+        <!--====== Form Handler js ======-->
+        <script src="assets/js/form-handler.js"></script>
+        <!--====== Current Year Script ======-->
+        <script>
+            document.getElementById('current-year').textContent = new Date().getFullYear();
+        </script>
+        <!--====== Back to Top Button Visibility ======-->
+        <script>
+            (function() {
+                const backToTopButton = document.querySelector('.back-to-top');
 
-    <footer class="footer-wrapper footer-1">
-            <div class="footer-widgets-wrapper">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xl-6 offset-xl-3 col-lg-8 offset-lg-2 col-12 text-center">
-                            <div class="single-footer-widget wow fadeInUp">
-                                <div class="about-us-widget">
-                                    <h3 style="color: #fff; margin-bottom: 20px;">💻 MacDetox</h3>
-                                    <p>Reclaim gigabytes of wasted space. Clean invisible junk, uninstall apps completely, and see what's eating your storage.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom-wrapper">
-                <div class="container">
-                    <div class="footer-bottom-content d-md-flex justify-content-center">
-                        <div class="site-copyright wow fadeInUp" data-wow-delay=".2" data-wow-duration="1s">
-                            <p>&copy; 2025 MacDetox. All Rights Reserved.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-wave">
-                <div id="footer-wave-anim"></div>
-            </div>
-    </footer>
+                if (!backToTopButton) return;
 
-    <!--  ALl JS Plugins
-    ====================================== -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/modernizr.min.js"></script>
-    <script src="assets/js/jquery.easing.js"></script>
-    <script src="assets/js/popper.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/isotope.pkgd.min.js"></script>
-    <script src="assets/js/imageload.min.js"></script>
-    <script src="assets/js/scrollUp.min.js"></script>
-    <script src="assets/js/slick.min.js"></script>
-    <script src="assets/js/magnific-popup.min.js"></script>
-    <script src="assets/js/wow.min.js"></script>
-    <script src="assets/js/metismenu.js"></script>
-    <script src="assets/js/active.js"></script>
-    <script>
-        // Detect Safari and use canvas renderer for better performance
-        const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
-        const renderer = isSafari ? 'canvas' : 'svg';
-
-        // Store all animations
-        const animations = {};
-
-        // Helper function to load animations with lazy loading
-        function loadAnimation(id, path, autoplay = false) {
-            const container = document.getElementById(id);
-            if (!container) return;
-
-            const anim = lottie.loadAnimation({
-                container: container,
-                renderer: renderer,
-                loop: true,
-                autoplay: autoplay,
-                path: path
-            });
-
-            animations[id] = anim;
-            return anim;
-        }
-
-        // Load hero background immediately (above the fold)
-        loadAnimation('hero-bg', 'assets/wave.json', true);
-
-        // Lazy load other animations when they come into view
-        const observerOptions = {
-            root: null,
-            rootMargin: '50px',
-            threshold: 0.1
-        };
-
-        const animationObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                const id = entry.target.id;
-                if (entry.isIntersecting) {
-                    if (animations[id]) {
-                        animations[id].play();
+                // Ждем инициализации GSAP
+                window.addEventListener('load', function() {
+                    // Используем ScrollTrigger для отслеживания скролла (работает с ScrollSmoother)
+                    if (typeof ScrollTrigger !== 'undefined') {
+                        ScrollTrigger.create({
+                            start: 'top -300',
+                            end: 'max',
+                            onUpdate: (self) => {
+                                if (self.progress > 0) {
+                                    backToTopButton.classList.add('show');
+                                } else {
+                                    backToTopButton.classList.remove('show');
+                                }
+                            }
+                        });
+                    } else {
+                        // Fallback для обычного scroll (если GSAP не загружен)
+                        window.addEventListener('scroll', function() {
+                            if (window.scrollY > 300) {
+                                backToTopButton.classList.add('show');
+                            } else {
+                                backToTopButton.classList.remove('show');
+                            }
+                        });
                     }
-                } else {
-                    if (animations[id]) {
-                        animations[id].pause();
+
+                    // Плавная прокрутка вверх при клике
+                    backToTopButton.addEventListener('click', function(e) {
+                        e.preventDefault();
+
+                        // Используем ScrollSmoother если доступен
+                        if (typeof ScrollSmoother !== 'undefined') {
+                            const smoother = ScrollSmoother.get();
+                            if (smoother) {
+                                smoother.scrollTo(0, true, 'top top');
+                            } else {
+                                window.scrollTo({ top: 0, behavior: 'smooth' });
+                            }
+                        } else {
+                            window.scrollTo({ top: 0, behavior: 'smooth' });
+                        }
+                    });
+                });
+            })();
+        </script>
+        <!--====== SAFARI: Баланс между красотой и производительностью ======-->
+        <script>
+            (function() {
+                // Проверяем Safari
+                const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+
+                if (isSafari) {
+                    console.log('🍎 Safari detected - applying balanced optimizations');
+
+                    // Легкие оптимизации - анимации остаются, но ускорены
+                    const style = document.createElement('style');
+                    style.textContent = `
+                        /* SAFARI: Быстрые легкие анимации */
+
+                        /* AOS анимации быстрее */
+                        [data-aos] {
+                            transition-duration: 0.4s !important;
+                        }
+
+                        /* Hover только через opacity - самое быстрое свойство */
+                        .ss-iconic-box,
+                        .sasly-info-box,
+                        .read-more,
+                        .theme-btn {
+                            transition: opacity 0.25s ease, transform 0.25s ease !important;
+                        }
+
+                        .ss-iconic-box:hover,
+                        .sasly-info-box:hover {
+                            opacity: 0.95 !important;
+                        }
+
+                        /* Убираем медленные box-shadow transitions */
+                        .ss-iconic-box,
+                        .sasly-info-box {
+                            box-shadow: none !important;
+                        }
+                    `;
+                    document.head.appendChild(style);
+
+                    console.log('✅ Balanced animations applied for Safari');
+                }
+            })();
+        </script>
+        <!--====== Header Transparency Simple Fix (Safari) ======-->
+        <script>
+            // ПРОСТОЕ решение без бесконечных циклов
+            (function() {
+                // Ждем полной загрузки страницы
+                window.addEventListener('load', function() {
+                    const header = document.querySelector('.header-nine');
+                    const headerNav = document.querySelector('.header-nine .header-navigation');
+
+                    if (!header) {
+                        console.error('❌ Header not found!');
+                        return;
                     }
-                }
-            });
-        }, observerOptions);
 
-        // Wait for DOM to be ready
-        document.addEventListener('DOMContentLoaded', function() {
-            // Load all animations
-            loadAnimation('sparkles', 'assets/sparkles.json');
-            loadAnimation('chart-anim', 'assets/analytics-chart.json');
-            loadAnimation('lightning-anim', 'assets/lightning.json');
-            loadAnimation('support-anim', 'assets/support.json');
-            loadAnimation('icon-trash', 'assets/trash.json');
-            loadAnimation('icon-search', 'assets/search.json');
-            loadAnimation('icon-chart', 'assets/chart.json');
-            loadAnimation('footer-wave-anim', 'assets/wave.json');
+                    // Просто устанавливаем прозрачность ОДИН РАЗ
+                    header.style.setProperty('background-color', 'transparent', 'important');
+                    header.style.setProperty('background', 'transparent', 'important');
 
-            // Observe all animation containers
-            Object.keys(animations).forEach(id => {
-                const element = document.getElementById(id);
-                if (element && id !== 'hero-bg') { // Don't pause hero background
-                    animationObserver.observe(element);
-                }
-            });
-        });
-    </script>
+                    if (headerNav) {
+                        headerNav.style.setProperty('background-color', 'transparent', 'important');
+                        headerNav.style.setProperty('background', 'transparent', 'important');
+                    }
 
-    <script>
-        window.addEventListener('scroll', function() {
-        const header = document.querySelector('.header-1');
-        if (window.scrollY > 50) {
-            header.classList.add('scrolled');
-        } else {
-            header.classList.remove('scrolled');
-        }
-        });
-    </script>
-
-   <!-- wow.js -->
-    <script src="assets/js/wow.min.js"></script>
-
-    <!-- активация wow -->
-    <script>
-    // Initialize WOW.js
-    new WOW().init();
-
-    // Force FAQ accordion to be fully visible
-    setTimeout(function() {
-        const faqAccordion = document.getElementById('mainFAQ');
-        if (faqAccordion) {
-            const allElements = faqAccordion.querySelectorAll('*');
-            allElements.forEach(el => {
-                el.style.setProperty('opacity', '1', 'important');
-                el.style.setProperty('visibility', 'visible', 'important');
-            });
-        }
-    }, 100);
-    </script>
-</body>
-
+                    const computedBg = window.getComputedStyle(header).backgroundColor;
+                    console.log('✅ Header transparency applied');
+                    console.log('└─ Computed background-color:', computedBg);
+                });
+            })();
+        </script>
+    </body>
 </html>
